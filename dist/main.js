@@ -1,4 +1,4 @@
-System.register(['./Arrays/RotateArraySpec', './Arrays/ReversePolishNotationSpec', './Arrays/LongestUniqueLettersSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './Trees/BinaryTreeSpec'], function(exports_1, context_1) {
+System.register(['./Arrays/RotateArraySpec', './Arrays/ReversePolishNotationSpec', './Arrays/LongestUniqueLettersSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './LinkedList/LinkedListSpec', './Trees/BinaryTreeSpec'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     return {
@@ -8,7 +8,8 @@ System.register(['./Arrays/RotateArraySpec', './Arrays/ReversePolishNotationSpec
             function (_3) {},
             function (_4) {},
             function (_5) {},
-            function (_6) {}],
+            function (_6) {},
+            function (_7) {}],
         execute: function() {
         }
     }
