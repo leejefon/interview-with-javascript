@@ -4,3 +4,5 @@ import './Arrays/LongestUniqueLettersSpec';
 
 import './DynamicProgramming/LongestIncreasingSequenceSpec';
 import './DynamicProgramming/MaxSubArraySpec';
+
+import './Trees/BinaryTreeSpec';
