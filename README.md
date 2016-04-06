@@ -12,3 +12,11 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 - [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+
+## Trees
+
+- Binary Tree Traversals
+    - [preOrder](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+    - [inOrder](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+    - [postOrder](https://leetcode.com/problems/binary-tree-postorder-traversal/)

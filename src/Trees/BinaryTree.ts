@@ -42,15 +42,46 @@ export class BinaryTree {
         }
     }
 
-    print() {
-        this.printHelper(this.root);
+    traversal(type: string = 'in') {
+        var result = [];
+
+        switch (type) {
+            case 'pre':
+                this.preOrderTraversal(this.root, result);
+                break;
+            case 'in':
+                this.inOrderTraversal(this.root, result);
+                break;
+            case 'post':
+                this.postOrderTraversal(this.root, result);
+                break;
+        }
+
+        return result;
     }
 
-    private printHelper(root: Child) {
+    private preOrderTraversal(root: Child, dataArr) {
         if (!root) return;
-        this.printHelper(root.left);
-        root.printData();
-        this.printHelper(root.right);
+
+        dataArr.push(root.data);
+        this.preOrderTraversal(root.left, dataArr);
+        this.preOrderTraversal(root.right, dataArr);
+    }
+
+    private inOrderTraversal(root: Child, dataArr) {
+        if (!root) return;
+
+        this.inOrderTraversal(root.left, dataArr);
+        dataArr.push(root.data);
+        this.inOrderTraversal(root.right, dataArr);
+    }
+
+    private postOrderTraversal(root: Child, dataArr) {
+        if (!root) return;
+
+        this.postOrderTraversal(root.left, dataArr);
+        this.postOrderTraversal(root.right, dataArr);
+        dataArr.push(root.data);
     }
 
     search(data) {
@@ -69,5 +100,16 @@ export class BinaryTree {
         } else if (data < root.data) {
             return this.searchHelper(root.left, data);
         }
+    }
+
+    print() {
+        this.printHelper(this.root);
+    }
+
+    private printHelper(root: Child) {
+        if (!root) return;
+        this.printHelper(root.left);
+        root.printData();
+        this.printHelper(root.right);
     }
 }
