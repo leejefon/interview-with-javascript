@@ -6,6 +6,7 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
+- [ThreeSum](https://leetcode.com/problems/3sum/)
 
 
 ## DynamicProgramming
