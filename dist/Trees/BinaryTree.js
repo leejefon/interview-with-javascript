@@ -53,6 +53,9 @@ System.register([], function(exports_1, context_1) {
                         case 'post':
                             this.postOrderTraversal(this.root, result);
                             break;
+                        case 'level':
+                            this.levelOrderTraversal(this.root, result);
+                            break;
                     }
                     return result;
                 };
@@ -76,6 +79,20 @@ System.register([], function(exports_1, context_1) {
                     this.postOrderTraversal(root.left, dataArr);
                     this.postOrderTraversal(root.right, dataArr);
                     dataArr.push(root.data);
+                };
+                BinaryTree.prototype.levelOrderTraversal = function (root, dataArr, level) {
+                    if (level === void 0) { level = 0; }
+                    if (!root)
+                        return;
+                    if (dataArr[level]) {
+                        dataArr[level].push(root.data);
+                    }
+                    else {
+                        dataArr[level] = [root.data];
+                    }
+                    this.levelOrderTraversal(root.left, dataArr, level + 1);
+                    this.levelOrderTraversal(root.right, dataArr, level + 1);
+                    return dataArr;
                 };
                 BinaryTree.prototype.search = function (data) {
                     return this.searchHelper(this.root, data);

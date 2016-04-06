@@ -48,6 +48,19 @@ System.register(['./BinaryTree'], function(exports_1, context_1) {
                     tree.insert(new BinaryTree_1.Child(70));
                     expect(tree.traversal('post')).toEqual([30, 40, 70, 60, 50]);
                 });
+                it("levelorder traversal", function () {
+                    var tree = new BinaryTree_1.BinaryTree(50);
+                    tree.insert(new BinaryTree_1.Child(40));
+                    tree.insert(new BinaryTree_1.Child(30));
+                    tree.insert(new BinaryTree_1.Child(60));
+                    tree.insert(new BinaryTree_1.Child(70));
+                    var result = [
+                        [50],
+                        [40, 60],
+                        [30, 70]
+                    ];
+                    expect(tree.traversal('level')).toEqual(result);
+                });
             });
         }
     }

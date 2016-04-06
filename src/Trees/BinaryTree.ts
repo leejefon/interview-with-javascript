@@ -55,6 +55,9 @@ export class BinaryTree {
             case 'post':
                 this.postOrderTraversal(this.root, result);
                 break;
+            case 'level':
+                this.levelOrderTraversal(this.root, result);
+                break;
         }
 
         return result;
@@ -82,6 +85,21 @@ export class BinaryTree {
         this.postOrderTraversal(root.left, dataArr);
         this.postOrderTraversal(root.right, dataArr);
         dataArr.push(root.data);
+    }
+
+    private levelOrderTraversal(root: Child, dataArr, level: number = 0) {
+        if (!root) return;
+
+        if (dataArr[level]) {
+            dataArr[level].push(root.data);
+        } else {
+            dataArr[level] = [root.data];
+        }
+
+        this.levelOrderTraversal(root.left, dataArr, level + 1);
+        this.levelOrderTraversal(root.right, dataArr, level + 1);
+
+        return dataArr;
     }
 
     search(data) {
