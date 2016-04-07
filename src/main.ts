@@ -7,5 +7,6 @@ import './DynamicProgramming/LongestIncreasingSequenceSpec';
 import './DynamicProgramming/MaxSubArraySpec';
 
 import './LinkedList/LinkedListSpec';
+import './LinkedList/SortListSpec';
 
 import './Trees/BinaryTreeSpec';

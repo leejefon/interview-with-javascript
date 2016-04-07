@@ -15,6 +15,11 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 
+## LinkedList
+
+- [Sort List](https://leetcode.com/problems/sort-list/)
+
+
 ## Trees
 
 - Binary Tree Traversals
