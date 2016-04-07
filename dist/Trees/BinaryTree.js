@@ -40,60 +40,6 @@ System.register([], function(exports_1, context_1) {
                         }
                     }
                 };
-                BinaryTree.prototype.traversal = function (type) {
-                    if (type === void 0) { type = 'in'; }
-                    var result = [];
-                    switch (type) {
-                        case 'pre':
-                            this.preOrderTraversal(this.root, result);
-                            break;
-                        case 'in':
-                            this.inOrderTraversal(this.root, result);
-                            break;
-                        case 'post':
-                            this.postOrderTraversal(this.root, result);
-                            break;
-                        case 'level':
-                            this.levelOrderTraversal(this.root, result);
-                            break;
-                    }
-                    return result;
-                };
-                BinaryTree.prototype.preOrderTraversal = function (root, dataArr) {
-                    if (!root)
-                        return;
-                    dataArr.push(root.data);
-                    this.preOrderTraversal(root.left, dataArr);
-                    this.preOrderTraversal(root.right, dataArr);
-                };
-                BinaryTree.prototype.inOrderTraversal = function (root, dataArr) {
-                    if (!root)
-                        return;
-                    this.inOrderTraversal(root.left, dataArr);
-                    dataArr.push(root.data);
-                    this.inOrderTraversal(root.right, dataArr);
-                };
-                BinaryTree.prototype.postOrderTraversal = function (root, dataArr) {
-                    if (!root)
-                        return;
-                    this.postOrderTraversal(root.left, dataArr);
-                    this.postOrderTraversal(root.right, dataArr);
-                    dataArr.push(root.data);
-                };
-                BinaryTree.prototype.levelOrderTraversal = function (root, dataArr, level) {
-                    if (level === void 0) { level = 0; }
-                    if (!root)
-                        return;
-                    if (dataArr[level]) {
-                        dataArr[level].push(root.data);
-                    }
-                    else {
-                        dataArr[level] = [root.data];
-                    }
-                    this.levelOrderTraversal(root.left, dataArr, level + 1);
-                    this.levelOrderTraversal(root.right, dataArr, level + 1);
-                    return dataArr;
-                };
                 BinaryTree.prototype.search = function (data) {
                     return this.searchHelper(this.root, data);
                 };

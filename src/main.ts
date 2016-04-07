@@ -10,3 +10,4 @@ import './LinkedList/LinkedListSpec';
 import './LinkedList/SortListSpec';
 
 import './Trees/BinaryTreeSpec';
+import './Trees/TreeTraversalSpec';

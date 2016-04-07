@@ -1,5 +1,4 @@
 
-
 export class Child {
 
     data: any;
@@ -40,66 +39,6 @@ export class BinaryTree {
                 root.left = child;
             }
         }
-    }
-
-    traversal(type: string = 'in') {
-        var result = [];
-
-        switch (type) {
-            case 'pre':
-                this.preOrderTraversal(this.root, result);
-                break;
-            case 'in':
-                this.inOrderTraversal(this.root, result);
-                break;
-            case 'post':
-                this.postOrderTraversal(this.root, result);
-                break;
-            case 'level':
-                this.levelOrderTraversal(this.root, result);
-                break;
-        }
-
-        return result;
-    }
-
-    private preOrderTraversal(root: Child, dataArr) {
-        if (!root) return;
-
-        dataArr.push(root.data);
-        this.preOrderTraversal(root.left, dataArr);
-        this.preOrderTraversal(root.right, dataArr);
-    }
-
-    private inOrderTraversal(root: Child, dataArr) {
-        if (!root) return;
-
-        this.inOrderTraversal(root.left, dataArr);
-        dataArr.push(root.data);
-        this.inOrderTraversal(root.right, dataArr);
-    }
-
-    private postOrderTraversal(root: Child, dataArr) {
-        if (!root) return;
-
-        this.postOrderTraversal(root.left, dataArr);
-        this.postOrderTraversal(root.right, dataArr);
-        dataArr.push(root.data);
-    }
-
-    private levelOrderTraversal(root: Child, dataArr, level: number = 0) {
-        if (!root) return;
-
-        if (dataArr[level]) {
-            dataArr[level].push(root.data);
-        } else {
-            dataArr[level] = [root.data];
-        }
-
-        this.levelOrderTraversal(root.left, dataArr, level + 1);
-        this.levelOrderTraversal(root.right, dataArr, level + 1);
-
-        return dataArr;
     }
 
     search(data) {
