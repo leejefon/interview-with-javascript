@@ -28,3 +28,8 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
     - [inOrder](https://leetcode.com/problems/binary-tree-inorder-traversal/)
     - [postOrder](https://leetcode.com/problems/binary-tree-postorder-traversal/)
     - [levelOrder](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+
+
+## Matrix
+
+- [Search 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)

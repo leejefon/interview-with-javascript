@@ -12,3 +12,5 @@ import './LinkedList/SortListSpec';
 
 import './Trees/BinaryTreeSpec';
 import './Trees/TreeTraversalSpec';
+
+import './Matrix/Search2DMatrixSpec';
