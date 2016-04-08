@@ -14,6 +14,7 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 - [Coin Change](https://leetcode.com/problems/coin-change/)
+- [WordBreak](https://leetcode.com/problems/word-break/) - Facebook
 
 
 ## LinkedList

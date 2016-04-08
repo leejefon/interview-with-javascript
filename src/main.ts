@@ -6,6 +6,7 @@ import './Arrays/ThreeSumSpec';
 import './DynamicProgramming/LongestIncreasingSequenceSpec';
 import './DynamicProgramming/MaxSubArraySpec';
 import './DynamicProgramming/CoinChangeSpec';
+import './DynamicProgramming/WordBreakSpec';
 
 import './LinkedList/LinkedListSpec';
 import './LinkedList/SortListSpec';
