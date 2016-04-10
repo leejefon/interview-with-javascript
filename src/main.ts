@@ -13,5 +13,6 @@ import './LinkedList/SortListSpec';
 
 import './Trees/BinaryTreeSpec';
 import './Trees/TreeTraversalSpec';
+import './Trees/LongestPathSpec';
 
 import './Matrix/Search2DMatrixSpec';
