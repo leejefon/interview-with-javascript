@@ -1,7 +1,7 @@
-import './Arrays/RotateArraySpec';
-import './Arrays/ReversePolishNotationSpec';
-import './Arrays/LongestUniqueLettersSpec';
-import './Arrays/ThreeSumSpec';
+import './Array/RotateArraySpec';
+import './Array/ReversePolishNotationSpec';
+import './Array/LongestUniqueLettersSpec';
+import './Array/ThreeSumSpec';
 
 import './DynamicProgramming/LongestIncreasingSequenceSpec';
 import './DynamicProgramming/MaxSubArraySpec';
@@ -11,8 +11,8 @@ import './DynamicProgramming/WordBreakSpec';
 import './LinkedList/LinkedListSpec';
 import './LinkedList/SortListSpec';
 
-import './Trees/BinaryTreeSpec';
-import './Trees/TreeTraversalSpec';
-import './Trees/LongestPathSpec';
+import './Tree/BinaryTreeSpec';
+import './Tree/TreeTraversalSpec';
+import './Tree/LongestPathSpec';
 
 import './Matrix/Search2DMatrixSpec';
