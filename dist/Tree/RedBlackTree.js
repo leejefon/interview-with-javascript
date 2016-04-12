@@ -51,18 +51,59 @@ System.register(['./BinaryTree'], function(exports_1, context_1) {
                     if (node &&
                         JSON.stringify(node) !== JSON.stringify(this.root) &&
                         parent.color === Color.RED) {
-                        if (uncle.color === Color.RED) {
+                        if (uncle && uncle.color === Color.RED) {
                             parent.color = Color.BLACK;
                             uncle.color = Color.BLACK;
                             grandParent.color = Color.RED;
-                            this.adjustTree(grandParent);
+                        }
+                        else if (grandParent && parent.data < grandParent.data) {
+                            if (node.data > parent.data) {
+                                this.rotateLeft(parent, grandParent);
+                                node.color = Color.BLACK;
+                                grandParent.color = Color.RED;
+                            }
+                            else {
+                                parent.color = Color.BLACK;
+                                grandParent.color = Color.RED;
+                            }
+                            this.rotateRight(grandParent, grandParent.getParent(this.root));
+                        }
+                        else if (grandParent && parent.data > grandParent.data) {
+                            if (node.data < parent.data) {
+                                this.rotateRight(parent, grandParent);
+                                node.color = Color.BLACK;
+                                grandParent.color = Color.RED;
+                            }
+                            else {
+                                parent.color = Color.BLACK;
+                                grandParent.color = Color.RED;
+                            }
+                            this.rotateLeft(grandParent, grandParent.getParent(this.root));
                         }
                     }
                     this.root.color = Color.BLACK;
                 };
-                RedBlackTree.prototype.rotateRight = function () {
+                RedBlackTree.prototype.rotateRight = function (node, parent) {
+                    var x = node.left;
+                    node.left = x.right;
+                    x.right = node;
+                    if (parent) {
+                        if (x.data > parent.data)
+                            parent.right = x;
+                        else
+                            parent.left = x;
+                    }
                 };
-                RedBlackTree.prototype.rotateLeft = function () {
+                RedBlackTree.prototype.rotateLeft = function (node, parent) {
+                    var x = node.right;
+                    node.right = x.left;
+                    x.left = node;
+                    if (parent) {
+                        if (x.data > parent.data)
+                            parent.right = x;
+                        else
+                            parent.left = x;
+                    }
                 };
                 return RedBlackTree;
             }(BinaryTree_1.BinaryTree));

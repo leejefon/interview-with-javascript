@@ -39,23 +39,57 @@ export class RedBlackTree extends BinaryTree {
             JSON.stringify(node) !== JSON.stringify(this.root) &&
             parent.color === Color.RED
         ) {
-            // Recolor
-            if (uncle.color === Color.RED) {
+            if (uncle && uncle.color === Color.RED) { // Recolor
                 parent.color = Color.BLACK;
                 uncle.color = Color.BLACK;
                 grandParent.color = Color.RED;
-                this.adjustTree(grandParent);
+            } else if (grandParent && parent.data < grandParent.data) { // Left of grandparent
+                if (node.data > parent.data) { // right of parent
+                    this.rotateLeft(parent, grandParent);
+                    node.color = Color.BLACK;
+                    grandParent.color = Color.RED;
+                } else {
+                    parent.color = Color.BLACK;
+                    grandParent.color = Color.RED;
+                }
+
+                this.rotateRight(grandParent, <RedBlackNode> grandParent.getParent(this.root));
+            } else if (grandParent && parent.data > grandParent.data) { // Right of grandparent
+                if (node.data < parent.data) { // left of parent
+                    this.rotateRight(parent, grandParent);
+                    node.color = Color.BLACK;
+                    grandParent.color = Color.RED;
+                } else {
+                    parent.color = Color.BLACK;
+                    grandParent.color = Color.RED;
+                }
+
+                this.rotateLeft(grandParent, <RedBlackNode> grandParent.getParent(this.root));
             }
         }
 
         (<RedBlackNode> this.root).color = Color.BLACK;
     }
 
-    private rotateRight() {
+    private rotateRight(node: RedBlackNode, parent: RedBlackNode) {
+        var x: RedBlackNode = <RedBlackNode> node.left;
+        node.left = x.right;
+        x.right = node;
 
+        if (parent) {
+            if (x.data > parent.data) parent.right = x;
+            else parent.left = x;
+        }
     }
 
-    private rotateLeft() {
+    private rotateLeft(node: RedBlackNode, parent: RedBlackNode) {
+        var x: RedBlackNode = <RedBlackNode> node.right;
+        node.right = x.left;
+        x.left = node;
 
+        if (parent) {
+            if (x.data > parent.data) parent.right = x;
+            else parent.left = x;
+        }
     }
 }
