@@ -1,4 +1,4 @@
-System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec', './Array/LongestUniqueLettersSpec', './Array/ThreeSumSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './DynamicProgramming/CoinChangeSpec', './DynamicProgramming/WordBreakSpec', './LinkedList/LinkedListSpec', './LinkedList/SortListSpec', './Tree/BinaryTreeSpec', './Tree/TreeTraversalSpec', './Tree/LongestPathSpec', './Matrix/Search2DMatrixSpec'], function(exports_1, context_1) {
+System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec', './Array/LongestUniqueLettersSpec', './Array/ThreeSumSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './DynamicProgramming/CoinChangeSpec', './DynamicProgramming/WordBreakSpec', './LinkedList/LinkedListSpec', './LinkedList/SortListSpec', './Tree/BinaryTreeSpec', './Tree/TreeTraversalSpec', './Tree/LongestPathSpec', './Matrix/Search2DMatrixSpec', './Graph/ReconstructItinerarySpec'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     return {
@@ -16,7 +16,8 @@ System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec',
             function (_11) {},
             function (_12) {},
             function (_13) {},
-            function (_14) {}],
+            function (_14) {},
+            function (_15) {}],
         execute: function() {
         }
     }

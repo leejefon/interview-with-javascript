@@ -1,7 +1,7 @@
 Interview Problems solved with JavaScript ES6 (TypeScript)
 ==========================================================
 
-## Arrays
+## Array
 
 - [Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
@@ -22,7 +22,7 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [Sort List](https://leetcode.com/problems/sort-list/)
 
 
-## Trees
+## Tree
 
 - Binary Tree Traversals
     - [preOrder](https://leetcode.com/problems/binary-tree-preorder-traversal/)
@@ -35,3 +35,8 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 ## Matrix
 
 - [Search 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+
+
+## Graph
+
+- [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)

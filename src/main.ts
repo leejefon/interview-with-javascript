@@ -16,3 +16,5 @@ import './Tree/TreeTraversalSpec';
 import './Tree/LongestPathSpec';
 
 import './Matrix/Search2DMatrixSpec';
+
+import './Graph/ReconstructItinerarySpec';
