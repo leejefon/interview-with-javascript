@@ -13,35 +13,35 @@ System.register(['./BinaryTree', './TreeTraversal'], function(exports_1, context
         execute: function() {
             describe("Binary Tree Traversal", function () {
                 it("preorder traversal", function () {
-                    var tree = new BinaryTree_1.BinaryTree(50);
-                    tree.insert(new BinaryTree_1.Child(40));
-                    tree.insert(new BinaryTree_1.Child(30));
-                    tree.insert(new BinaryTree_1.Child(60));
-                    tree.insert(new BinaryTree_1.Child(70));
+                    var tree = new BinaryTree_1.BinaryTree(new BinaryTree_1.Node(50));
+                    tree.insert(new BinaryTree_1.Node(40));
+                    tree.insert(new BinaryTree_1.Node(30));
+                    tree.insert(new BinaryTree_1.Node(60));
+                    tree.insert(new BinaryTree_1.Node(70));
                     expect(TreeTraversal_1.TreeTraversal.preOrder(tree.root)).toEqual([50, 40, 30, 60, 70]);
                 });
                 it("inorder traversal", function () {
-                    var tree = new BinaryTree_1.BinaryTree(50);
-                    tree.insert(new BinaryTree_1.Child(40));
-                    tree.insert(new BinaryTree_1.Child(30));
-                    tree.insert(new BinaryTree_1.Child(60));
-                    tree.insert(new BinaryTree_1.Child(70));
+                    var tree = new BinaryTree_1.BinaryTree(new BinaryTree_1.Node(50));
+                    tree.insert(new BinaryTree_1.Node(40));
+                    tree.insert(new BinaryTree_1.Node(30));
+                    tree.insert(new BinaryTree_1.Node(60));
+                    tree.insert(new BinaryTree_1.Node(70));
                     expect(TreeTraversal_1.TreeTraversal.inOrder(tree.root)).toEqual([30, 40, 50, 60, 70]);
                 });
                 it("postorder traversal", function () {
-                    var tree = new BinaryTree_1.BinaryTree(50);
-                    tree.insert(new BinaryTree_1.Child(40));
-                    tree.insert(new BinaryTree_1.Child(30));
-                    tree.insert(new BinaryTree_1.Child(60));
-                    tree.insert(new BinaryTree_1.Child(70));
+                    var tree = new BinaryTree_1.BinaryTree(new BinaryTree_1.Node(50));
+                    tree.insert(new BinaryTree_1.Node(40));
+                    tree.insert(new BinaryTree_1.Node(30));
+                    tree.insert(new BinaryTree_1.Node(60));
+                    tree.insert(new BinaryTree_1.Node(70));
                     expect(TreeTraversal_1.TreeTraversal.postOrder(tree.root)).toEqual([30, 40, 70, 60, 50]);
                 });
                 it("levelorder traversal", function () {
-                    var tree = new BinaryTree_1.BinaryTree(50);
-                    tree.insert(new BinaryTree_1.Child(40));
-                    tree.insert(new BinaryTree_1.Child(30));
-                    tree.insert(new BinaryTree_1.Child(60));
-                    tree.insert(new BinaryTree_1.Child(70));
+                    var tree = new BinaryTree_1.BinaryTree(new BinaryTree_1.Node(50));
+                    tree.insert(new BinaryTree_1.Node(40));
+                    tree.insert(new BinaryTree_1.Node(30));
+                    tree.insert(new BinaryTree_1.Node(60));
+                    tree.insert(new BinaryTree_1.Node(70));
                     var result = [
                         [50],
                         [40, 60],

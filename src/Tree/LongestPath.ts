@@ -1,8 +1,8 @@
-import { Child } from './BinaryTree';
+import { Node } from './BinaryTree';
 
 export class LongestPath {
 
-    static exec(root: Child) {
+    static exec(root: Node) {
         if (!root) {
             return {
                 length: 0,
