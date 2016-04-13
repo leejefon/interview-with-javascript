@@ -18,4 +18,5 @@ import './Tree/RedBlackTreeSpec';
 
 import './Matrix/Search2DMatrixSpec';
 
+import './Graph/GraphColoringSpec';
 import './Graph/ReconstructItinerarySpec';

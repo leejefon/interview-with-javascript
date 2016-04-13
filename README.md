@@ -24,7 +24,9 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 ## Tree
 
-- Binary Tree Traversals
+- [Binary Tree](https://en.wikipedia.org/wiki/Binary_tree)
+- [Red Black Tree](http://cs.lmu.edu/~ray/notes/redblacktrees/)
+- Tree Traversals
     - [preOrder](https://leetcode.com/problems/binary-tree-preorder-traversal/)
     - [inOrder](https://leetcode.com/problems/binary-tree-inorder-traversal/)
     - [postOrder](https://leetcode.com/problems/binary-tree-postorder-traversal/)
@@ -39,4 +41,5 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 ## Graph
 
+- [Graph Coloring](https://en.wikipedia.org/wiki/Graph_coloring)
 - [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)

@@ -1,6 +1,6 @@
 import { RedBlackTree, RedBlackNode, Color } from './RedBlackTree';
 
-declare var describe: any, it: any, expect: any ,xit: any;
+declare var describe: any, it: any, expect: any;
 
 describe("Red Black Tree Test", () => {
     it("recolring test: (self, parent, uncle) all red", () => {
