@@ -43,3 +43,4 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 - [Graph Coloring](https://en.wikipedia.org/wiki/Graph_coloring)
 - [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+- [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
