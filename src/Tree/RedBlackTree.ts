@@ -1,12 +1,12 @@
 import { BinaryTree, Node } from './BinaryTree';
 
-export class Color {
-    public static RED: string = 'RED';
-    public static BLACK: string = 'BLACK';
+export enum Color {
+    RED,
+    BLACK
 }
 
 export class RedBlackNode extends Node {
-    color: string;
+    color: Color;
 
     constructor(initData) {
         super(initData);

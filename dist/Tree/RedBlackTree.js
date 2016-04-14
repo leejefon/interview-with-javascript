@@ -14,13 +14,10 @@ System.register(['./BinaryTree'], function(exports_1, context_1) {
                 BinaryTree_1 = BinaryTree_1_1;
             }],
         execute: function() {
-            Color = (function () {
-                function Color() {
-                }
-                Color.RED = 'RED';
-                Color.BLACK = 'BLACK';
-                return Color;
-            }());
+            (function (Color) {
+                Color[Color["RED"] = 0] = "RED";
+                Color[Color["BLACK"] = 1] = "BLACK";
+            })(Color || (Color = {}));
             exports_1("Color", Color);
             RedBlackNode = (function (_super) {
                 __extends(RedBlackNode, _super);
