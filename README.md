@@ -44,3 +44,14 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [Graph Coloring](https://en.wikipedia.org/wiki/Graph_coloring)
 - [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
 - [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+
+
+## Sorting
+
+- [BubbleSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Bubble_sort)
+- [HeapSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Heapsort)
+- [InsertionSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Insertion_sort)
+- [MergeSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Merge_sort)
+- [QuickSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
+- [SelectionSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Selection_sort)
+- [ShellSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Shell_sort)
