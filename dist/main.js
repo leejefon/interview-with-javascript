@@ -1,4 +1,4 @@
-System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec', './Array/LongestUniqueLettersSpec', './Array/ThreeSumSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './DynamicProgramming/CoinChangeSpec', './DynamicProgramming/WordBreakSpec', './LinkedList/LinkedListSpec', './LinkedList/SortListSpec', './Tree/BinaryTreeSpec', './Tree/TreeTraversalSpec', './Tree/LongestPathSpec', './Tree/RedBlackTreeSpec', './Matrix/Search2DMatrixSpec', './Graph/GraphColoringSpec', './Graph/ReconstructItinerarySpec', './Graph/ValidSudokuSpec', './Sorting/SortingSpec'], function(exports_1, context_1) {
+System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec', './Array/LongestUniqueLettersSpec', './Array/ThreeSumSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './DynamicProgramming/CoinChangeSpec', './DynamicProgramming/WordBreakSpec', './LinkedList/LinkedListSpec', './LinkedList/SortListSpec', './Tree/BinaryTreeSpec', './Tree/TreeTraversalSpec', './Tree/LongestPathSpec', './Tree/RedBlackTreeSpec', './Matrix/Search2DMatrixSpec', './Graph/GraphColoringSpec', './Graph/ReconstructItinerarySpec', './Graph/ValidSudokuSpec', './Sorting/SortingSpec', './HashTable/HashTablespec'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     return {
@@ -21,7 +21,8 @@ System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec',
             function (_16) {},
             function (_17) {},
             function (_18) {},
-            function (_19) {}],
+            function (_19) {},
+            function (_20) {}],
         execute: function() {
         }
     }

@@ -55,3 +55,8 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [QuickSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
 - [SelectionSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Selection_sort)
 - [ShellSort](https://en.wikipedia.org/wiki/Sorting_algorithm#Shell_sort)
+
+
+## Hash Table
+
+- [HashTable](https://en.wikipedia.org/wiki/Hash_table)

@@ -23,3 +23,5 @@ import './Graph/ReconstructItinerarySpec';
 import './Graph/ValidSudokuSpec';
 
 import './Sorting/SortingSpec';
+
+import './HashTable/HashTablespec';
