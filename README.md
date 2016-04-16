@@ -61,3 +61,13 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 ## Hash Table
 
 - [HashTable](https://en.wikipedia.org/wiki/Hash_table)
+
+
+## Other
+
+- [CountDigits](https://leetcode.com/discuss/44281/4-lines-o-log-n-c-java-python)
+- BitManipulation
+    - [SwapWithoutTemp](http://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/)
+    - [AddWithoutPlus](http://www.geeksforgeeks.org/add-two-numbers-without-using-arithmetic-operators/)
+    - [CompareWithoutIf](http://stackoverflow.com/questions/4772780/find-the-maximum-of-two-numbers-without-using-if-else-or-any-other-comparison-op)
+    - [SingleNumber](https://leetcode.com/discuss/6170/my-o-n-solution-using-xor)

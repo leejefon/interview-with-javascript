@@ -26,3 +26,6 @@ import './Graph/ValidSudokuSpec';
 import './Sorting/SortingSpec';
 
 import './HashTable/HashTablespec';
+
+import './Other/BitManipulationSpec';
+import './Other/CountDigitsSpec';
