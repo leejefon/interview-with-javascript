@@ -15,6 +15,7 @@ import './Tree/BinaryTreeSpec';
 import './Tree/TreeTraversalSpec';
 import './Tree/LongestPathSpec';
 import './Tree/RedBlackTreeSpec';
+import './Tree/TrieSpec';
 
 import './Matrix/Search2DMatrixSpec';
 

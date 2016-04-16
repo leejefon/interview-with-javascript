@@ -26,6 +26,7 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 - [Binary Tree](https://en.wikipedia.org/wiki/Binary_tree)
 - [Red Black Tree](http://cs.lmu.edu/~ray/notes/redblacktrees/)
+- [Trie](http://www.programcreek.com/2014/05/leetcode-implement-trie-prefix-tree-java/)
 - Tree Traversals
     - [preOrder](https://leetcode.com/problems/binary-tree-preorder-traversal/)
     - [inOrder](https://leetcode.com/problems/binary-tree-inorder-traversal/)
