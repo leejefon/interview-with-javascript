@@ -2,7 +2,7 @@ import { Node } from './BinaryTree';
 
 export class LongestPath {
 
-    static exec(root: Node) {
+    public static exec(root: Node): { length: number, height: number } {
         if (!root) {
             return {
                 length: 0,
@@ -10,8 +10,8 @@ export class LongestPath {
             };
         }
 
-        var leftTree = this.exec(root.left);
-        var rightTree = this.exec(root.right);
+        var leftTree: { length: number, height: number } = this.exec(root.left);
+        var rightTree: { length: number, height: number } = this.exec(root.right);
 
         return {
             length: Math.max(leftTree.height + rightTree.height + 1, leftTree.length, rightTree.length),

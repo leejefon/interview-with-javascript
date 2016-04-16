@@ -1,6 +1,7 @@
 
 export class RotateArray {
-    static exec (arr: number[], k: number) {
+
+    public static exec (arr: number[], k: number): number[] {
         if (k > arr.length) return null;
 
         var firstHalf = [];

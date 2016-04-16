@@ -1,13 +1,13 @@
 
 export class MergeSort {
 
-    static sort(arr: number[]) {
+    public static sort(arr: number[]): number[] {
 
         if (arr.length === 1) {
             return arr;
         }
 
-        var partitions = this.partition(arr);
+        var partitions: { left: number[], right: number[]} = this.partition(arr);
 
         var left: number[] = this.sort(partitions.left);
         var right: number[] = this.sort(partitions.right);
@@ -15,15 +15,15 @@ export class MergeSort {
         return this.merge(left, right);
     }
 
-    static partition(arr: number[]) {
+    private static partition(arr: number[]): { left: number[], right: number[]} {
         return {
             left: arr.splice(0, Math.floor(arr.length / 2)),
             right: arr
         };
     }
 
-    static merge(left: number[], right: number[]) {
-        var merged = [];
+    private static merge(left: number[], right: number[]): number[] {
+        var merged: number[] = [];
 
         if (left.length === 0) return right;
         if (right.length === 0) return left;

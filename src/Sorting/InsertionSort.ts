@@ -1,11 +1,11 @@
 
 export class InsertionSort {
 
-    static sort(arr: number[]) {
+    public static sort(arr: number[]): number[] {
         var sorted: number[] = [];
 
-        for (var i = 0; i < arr.length; i++) {
-            var item = arr[i];
+        for (var i in arr) {
+            var item: number = arr[i];
             for (var j = 0; j <= sorted.length; j++) {
                 if (j === sorted.length) {
                     sorted.push(item);
@@ -13,7 +13,7 @@ export class InsertionSort {
                 }
 
                 if (sorted[j] > item) {
-                    var temp = sorted[j];
+                    var temp: number = sorted[j];
                     sorted[j] = item;
                     item = temp;
                 }

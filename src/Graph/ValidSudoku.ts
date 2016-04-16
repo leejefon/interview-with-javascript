@@ -1,8 +1,8 @@
 
 export class ValidSudoku {
 
-    static exec(board: number[][]) {
-        var sudokuSize = board.length;
+    public static exec(board: number[][]): boolean {
+        var sudokuSize: number = board.length;
 
         var rowCheck: boolean[][] = [];
         var colCheck: boolean[][] = [];
@@ -22,8 +22,8 @@ export class ValidSudoku {
         for (var i = 0; i < sudokuSize; i++) {
             for (var j = 0; j < sudokuSize; j++) {
                 if (board[i][j] !== 0) {
-                    var num = board[i][j] - 1;
-                    var box = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+                    var num: number = board[i][j] - 1;
+                    var box: number = Math.floor(i / 3) * 3 + Math.floor(j / 3);
 
                     if (rowCheck[i][num] || colCheck[j][num] || boxCheck[box][num]) {
                         return false;

@@ -3,16 +3,16 @@ export class HashEntry {
     key: number;
     value: any;
 
-    constructor(key: number, value: any) {
+    public constructor(key: number, value: any) {
         this.key = key;
         this.value = value;
     }
 
-    public getKey() {
+    public getKey(): number {
         return this.key;
     }
 
-    public getValue() {
+    public getValue(): any {
         return this.value;
     }
 }
@@ -22,12 +22,12 @@ export class HashTable {
 
     table: HashEntry[];
 
-    constructor(table_size: number = 128) {
+    public constructor(table_size: number = 128) {
         this.TABLE_SIZE = table_size;
         this.table = new Array(this.TABLE_SIZE).fill(null);
     }
 
-    public get(key: number) {
+    public get(key: number): any {
         var hash: number = key % this.TABLE_SIZE;
         var originalHash: number = hash;
 
@@ -46,7 +46,7 @@ export class HashTable {
         }
     }
 
-    public put(key: number, value: any) {
+    public put(key: number, value: any): void {
         var hash: number = key % this.TABLE_SIZE;
         var originalHash: number = hash;
 

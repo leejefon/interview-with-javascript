@@ -1,12 +1,12 @@
 
 export class LongestUniqueLetters {
 
-    static exec(str: string) {
+    public static exec(str: string): number {
         var strNoRepeat: string[] = [];
-        var longest = 0;
+        var longest: number = 0;
 
         for (var i = 0; i < str.length; i++) {
-            var index = strNoRepeat.indexOf(str.charAt(i));
+            var index: number = strNoRepeat.indexOf(str.charAt(i));
             if (index !== -1) {
                 strNoRepeat = strNoRepeat.slice(index + 1);
                 strNoRepeat.push(str.charAt(i));

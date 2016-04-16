@@ -5,11 +5,11 @@ export class Node {
     left: Node;
     right: Node
 
-    constructor(data?) {
+    public constructor(data?) {
         this.data = data;
     }
 
-    getParent(root: Node) {
+    public getParent(root: Node): Node {
         if (!root) return null;
 
         var left: Node = null;
@@ -25,18 +25,18 @@ export class Node {
         return left ? left : right;
     }
 
-    getUncle(root: Node) {
+    public getUncle(root: Node): Node {
         if (!root) return null;
 
-        var parent = this.getParent(root);
-        var grandParent = parent ? parent.getParent(root) : null;
+        var parent: Node = this.getParent(root);
+        var grandParent: Node = parent ? parent.getParent(root) : null;
 
         if (!grandParent) return null;
         else if (this.data > grandParent.data) return grandParent.left;
         else return grandParent.right;
     }
 
-    print() {
+    public print(): void {
         console.log(this.data);
     }
 }
@@ -44,15 +44,15 @@ export class Node {
 export class BinaryTree {
     root: Node;
 
-    constructor(root: Node) {
+    public constructor(root: Node) {
         this.root = root;
     }
 
-    insert(node: Node) {
+    public insert(node: Node): void {
         this.insertHelper(this.root, node);
     }
 
-    private insertHelper(root: Node, node: Node) {
+    private insertHelper(root: Node, node: Node): void {
         if (node.data >= root.data) {
             if (root.right) {
                 this.insertHelper(root.right, node);
@@ -68,7 +68,7 @@ export class BinaryTree {
         }
     }
 
-    search(data) {
+    public search(data): any {
         return this.searchHelper(this.root, data);
     }
 
@@ -86,7 +86,7 @@ export class BinaryTree {
         }
     }
 
-    print() {
+    public print(): void {
         this.printHelper(this.root);
     }
 

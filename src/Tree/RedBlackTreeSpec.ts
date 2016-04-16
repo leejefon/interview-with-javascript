@@ -4,7 +4,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Red Black Tree Test", () => {
     it("recolring test: (self, parent, uncle) all red", () => {
-        var tree = new RedBlackTree(new RedBlackNode(50));
+        let tree: RedBlackTree = new RedBlackTree(new RedBlackNode(50));
 
         tree.insert(new RedBlackNode(40));
         tree.insert(new RedBlackNode(60));
@@ -17,7 +17,7 @@ describe("Red Black Tree Test", () => {
     });
 
     it("reconstruct test: right -> right", () => {
-        var tree = new RedBlackTree(new RedBlackNode(50));
+        let tree: RedBlackTree = new RedBlackTree(new RedBlackNode(50));
 
         tree.insert(new RedBlackNode(40));
         tree.insert(new RedBlackNode(60));
@@ -38,7 +38,7 @@ describe("Red Black Tree Test", () => {
     });
 
     it("reconstruct test: right -> left", () => {
-        var tree = new RedBlackTree(new RedBlackNode(50));
+        let tree: RedBlackTree = new RedBlackTree(new RedBlackNode(50));
 
         tree.insert(new RedBlackNode(40));
         tree.insert(new RedBlackNode(60));
@@ -59,7 +59,7 @@ describe("Red Black Tree Test", () => {
     });
 
     it("reconstruct test: left -> right", () => {
-        var tree = new RedBlackTree(new RedBlackNode(50));
+        let tree: RedBlackTree = new RedBlackTree(new RedBlackNode(50));
 
         tree.insert(new RedBlackNode(40));
         tree.insert(new RedBlackNode(60));
@@ -80,7 +80,7 @@ describe("Red Black Tree Test", () => {
     });
 
     it("reconstruct test: left -> left", () => {
-        var tree = new RedBlackTree(new RedBlackNode(50));
+        let tree: RedBlackTree = new RedBlackTree(new RedBlackNode(50));
 
         tree.insert(new RedBlackNode(40));
         tree.insert(new RedBlackNode(60));

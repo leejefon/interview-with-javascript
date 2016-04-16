@@ -4,9 +4,8 @@ declare var describe: any, it: any, expect: any;
 
 describe("ThreeSum", () => {
     it("should work", () => {
-        var arr = [-1, 0, 1, 2, -1, -4];
-
-        var results = [
+        let arr: number[] = [-1, 0, 1, 2, -1, -4];
+        let results: number[][] = [
             [-1, -1, 2],
             [-1, 0, 1]
         ];

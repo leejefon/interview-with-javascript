@@ -5,7 +5,7 @@ export class TrieNode {
     children: HashTable;
     isEndOfWord: boolean;
 
-    constructor(char?: string) {
+    public constructor(char?: string) {
         if (char) this.char = char;
         this.children = new HashTable(26);
         this.isEndOfWord = false;
@@ -15,15 +15,15 @@ export class TrieNode {
 export class Trie {
     root: TrieNode;
 
-    constructor() {
+    public constructor() {
         this.root = new TrieNode();
     }
 
-    insert(str: string) {
+    public insert(str: string): void {
         this.insertHelper(this.root, str);
     }
 
-    private insertHelper(root: TrieNode, str: string) {
+    private insertHelper(root: TrieNode, str: string): void {
         if (str.length === 0) {
             root.isEndOfWord = true;
             return;
@@ -40,7 +40,7 @@ export class Trie {
         return this.insertHelper(node, str.substring(1));
     }
 
-    search(str: string) {
+    public search(str: string): boolean {
         var currRoot = this.root;
 
         for (var i = 0; i < str.length; i++) {

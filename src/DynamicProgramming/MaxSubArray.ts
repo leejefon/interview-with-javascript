@@ -1,9 +1,9 @@
 
 export class MaxSubArray {
 
-    static exec(arr: number[]) {
+    public static exec(arr: number[]): number {
         var result: number[] = Array(arr.length);
-        var max = arr[0];
+        var max: number = arr[0];
         result[0] = arr[0];
 
         for (var i = 1; i < arr.length; i++) {

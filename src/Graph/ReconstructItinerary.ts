@@ -1,7 +1,7 @@
 
 export class ReconstructItinerary {
 
-    static exec(tickets: string[][], startCity = 'JFK') {
+    public static exec(tickets: string[][], startCity = 'JFK'): string[] {
         var result: string[] = [];
         var map = {};
 

@@ -4,7 +4,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Linked List Test", () => {
     it("should work", () => {
-        var list = new List(10);
+        let list: List = new List(10);
 
         list.append(new Node(20));
         list.append(new Node(30));

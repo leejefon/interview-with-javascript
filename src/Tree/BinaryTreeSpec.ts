@@ -4,7 +4,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Binary Tree Test", () => {
     it("insert left and right", () => {
-        var tree = new BinaryTree(new Node(50));
+        let tree: BinaryTree = new BinaryTree(new Node(50));
 
         tree.insert(new Node(40));
         tree.insert(new Node(60));
@@ -14,7 +14,7 @@ describe("Binary Tree Test", () => {
     });
 
     it("search", () => {
-        var tree = new BinaryTree(new Node(50));
+        let tree: BinaryTree = new BinaryTree(new Node(50));
 
         tree.insert(new Node(40));
         tree.insert(new Node(30));

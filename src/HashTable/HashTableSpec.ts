@@ -1,11 +1,11 @@
 
 import { HashTable } from './HashTable';
 
-declare var describe: any, it: any, expect: any;
+declare let describe: any, it: any, expect: any;
 
 describe("Hash Table Test", () => {
     it("should insert and retrieve", () => {
-        var hashTable = new HashTable(3);
+        let hashTable: HashTable = new HashTable(3);
 
         hashTable.put(1, 'Jeff');
         hashTable.put(2, 'John');
@@ -15,7 +15,7 @@ describe("Hash Table Test", () => {
     });
 
     it("should move to next index if same hash", () => {
-        var hashTable = new HashTable(3);
+        let hashTable: HashTable = new HashTable(3);
 
         hashTable.put(1, 'Jeff');
         hashTable.put(4, 'Jone');
@@ -25,7 +25,7 @@ describe("Hash Table Test", () => {
     });
 
     it("should overwrite", () => {
-        var hashTable = new HashTable(3);
+        let hashTable: HashTable = new HashTable(3);
 
         hashTable.put(1, 'Jeff');
         hashTable.put(1, 'Jack');
@@ -34,7 +34,7 @@ describe("Hash Table Test", () => {
     });
 
     it("should throw error", () => {
-        var hashTable = new HashTable(5);
+        let hashTable: HashTable = new HashTable(5);
 
         hashTable.put(1, 'Jeff');
         hashTable.put(2, 'John');

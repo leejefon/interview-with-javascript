@@ -5,7 +5,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Longest Path", () => {
     it("should work", () => {
-        var tree: BinaryTree = new BinaryTree(new Node(10));
+        let tree: BinaryTree = new BinaryTree(new Node(10));
 
         tree.insert(new Node(5));
         tree.insert(new Node(3));

@@ -4,7 +4,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Graph Coloring", () => {
     it("should work", () => {
-        var graph = [
+        let graph: number[][] = [
             [0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
             [1, 0, 1, 0, 0, 0, 1, 0, 0, 0],
             [0, 1, 0, 1, 0, 0, 0, 1, 0, 0],
@@ -16,10 +16,10 @@ describe("Graph Coloring", () => {
             [0, 0, 0, 1, 0, 1, 1, 0, 0, 0],
             [0, 0, 0, 0, 1, 0, 1, 1, 0, 0]
         ];
-        var numColors = 3;
-        var result = [1, 2, 1, 2, 3, 2, 1, 3, 3, 2];
+        let numColors: number = 3;
+        let result: number[] = [1, 2, 1, 2, 3, 2, 1, 3, 3, 2];
 
-        var gc = new GraphColoring(graph, numColors);
+        let gc: GraphColoring = new GraphColoring(graph, numColors);
 
         expect(gc.solve()).toEqual(result);
     });

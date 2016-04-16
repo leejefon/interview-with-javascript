@@ -5,7 +5,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Sort List", () => {
     it("should work", () => {
-        var list = new List(20);
+        let list: List = new List(20);
 
         list.append(new Node(40));
         list.append(new Node(30));

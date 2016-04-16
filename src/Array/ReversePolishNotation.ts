@@ -1,6 +1,7 @@
 
 export class ReversePolishNotation {
-    static exec(tokens: string[]) {
+
+    public static exec(tokens: string[]): number {
         var stack: number[] = [];
 
         tokens.forEach(token => {

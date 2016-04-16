@@ -2,7 +2,7 @@ import { Node } from './LinkedList';
 
 export class SortList {
 
-    static exec(head: Node) {
+    public static exec(head: Node): Node {
         if (!head || !head.next) {
             return head;
         }
@@ -15,7 +15,7 @@ export class SortList {
         return this.merge(leftSide, rightSide);
     }
 
-    private static split (head: Node) {
+    private static split (head: Node): { left: Node, right: Node } {
         var slow: Node;
         var fast: Node;
 
@@ -46,7 +46,7 @@ export class SortList {
         };
     }
 
-    private static merge (leftSide, rightSide) {
+    private static merge (leftSide, rightSide): Node {
         var newHead: Node;
 
         if (!leftSide) return rightSide;

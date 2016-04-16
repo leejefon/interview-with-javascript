@@ -4,7 +4,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Valid Sudoku", () => {
     it("should work", () => {
-        var board = [
+        let board: number[][] = [
             [5, 3, 0, 0, 7, 0, 0, 0, 0],
             [6, 0, 0, 1, 9, 5, 0, 0, 0],
             [0, 9, 8, 0, 0, 0, 0, 6, 0],

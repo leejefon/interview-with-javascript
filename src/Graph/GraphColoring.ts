@@ -5,13 +5,13 @@ export class GraphColoring {
     colors: number[];
     numColors: number;
 
-    constructor(graph, numColors) {
+    public constructor(graph: number[][], numColors: number) {
         this.graph = graph;
         this.numColors = numColors;
         this.colors = Array(graph.length).fill(-1);
     }
 
-    solve(v: number = 0) {
+    public solve(v: number = 0): number[] {
         if (v === this.graph.length) return this.colors;
 
         for (var color = 1; color <= this.numColors; color++) {
@@ -22,7 +22,7 @@ export class GraphColoring {
         }
     }
 
-    checkNeighbours(v: number, color: number) {
+    public checkNeighbours(v: number, color: number): boolean {
         for (var i = 0; i < this.graph[v].length; i++) {
             if (this.graph[v][i] === 1 && this.colors[i] === color) {
                 return false;

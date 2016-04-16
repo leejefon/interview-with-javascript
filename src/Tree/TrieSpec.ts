@@ -4,7 +4,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Trie Test", () => {
     it("insert and search", () => {
-        var trie = new Trie();
+        let trie: Trie = new Trie();
 
         trie.insert('abc');
         trie.insert('abcde');

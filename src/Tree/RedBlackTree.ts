@@ -8,29 +8,29 @@ export enum Color {
 export class RedBlackNode extends Node {
     color: Color;
 
-    constructor(initData) {
+    public constructor(initData) {
         super(initData);
         this.color = Color.BLACK;
     }
 
-    print() {
+    public print(): void {
         console.log(this.data + ' ' + this.color);
     }
 }
 
 export class RedBlackTree extends BinaryTree {
 
-    constructor(root: RedBlackNode) {
+    public constructor(root: RedBlackNode) {
         super(root);
     }
 
-    insert(node: RedBlackNode) {
+    public insert(node: RedBlackNode): void {
         node.color = Color.RED;
         super.insert(node);
         this.adjustTree(node);
     }
 
-    private adjustTree(node: RedBlackNode) {
+    private adjustTree(node: RedBlackNode): void {
         var parent: RedBlackNode = <RedBlackNode> node.getParent(this.root);
         var uncle: RedBlackNode = <RedBlackNode> node.getUncle(this.root);
         var grandParent: RedBlackNode = parent ? <RedBlackNode> parent.getParent(this.root) : null;
@@ -71,7 +71,7 @@ export class RedBlackTree extends BinaryTree {
         (<RedBlackNode> this.root).color = Color.BLACK;
     }
 
-    private rotateRight(node: RedBlackNode, parent: RedBlackNode) {
+    private rotateRight(node: RedBlackNode, parent: RedBlackNode): void {
         var x: RedBlackNode = <RedBlackNode> node.left;
         node.left = x.right;
         x.right = node;
@@ -82,7 +82,7 @@ export class RedBlackTree extends BinaryTree {
         }
     }
 
-    private rotateLeft(node: RedBlackNode, parent: RedBlackNode) {
+    private rotateLeft(node: RedBlackNode, parent: RedBlackNode): void {
         var x: RedBlackNode = <RedBlackNode> node.right;
         node.right = x.left;
         x.left = node;

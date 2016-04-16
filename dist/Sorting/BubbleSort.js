@@ -9,8 +9,8 @@ System.register([], function(exports_1, context_1) {
                 function BubbleSort() {
                 }
                 BubbleSort.sort = function (arr) {
-                    for (var i = 0; i < arr.length; i++) {
-                        for (var j = 0; j < arr.length; j++) {
+                    for (var i in arr) {
+                        for (var j in arr) {
                             if (arr[j] > arr[i]) {
                                 var temp = arr[i];
                                 arr[i] = arr[j];

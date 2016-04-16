@@ -1,7 +1,7 @@
 
 export class WordBreak {
 
-    static exec(str: string, dict: string[]) {
+    public static exec(str: string, dict: string[]): boolean {
         var dp: boolean[] = Array(str.length + 1).fill(false);
         dp[0] = true;
 

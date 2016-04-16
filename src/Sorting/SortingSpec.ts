@@ -9,8 +9,8 @@ import { HeapSort } from './HeapSort';
 declare var describe: any, it: any, expect: any, beforeEach: any;
 
 describe("Sorting Test", () => {
-    var arr: number[] = [];
-    var result: number[] = [];
+    let arr: number[] = [];
+    let result: number[] = [];
 
     beforeEach(() => {
         arr = [65, 3, 21, 85, 33, 18, 44, 98, 57, 46];

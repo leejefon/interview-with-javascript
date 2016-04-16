@@ -1,8 +1,9 @@
 
 export class Search2DMatrix {
-    static exec(matrix: number[][], target: number) {
-        var i = matrix.length - 1;
-        var j = 0;
+
+    public static exec(matrix: number[][], target: number): boolean {
+        var i: number = matrix.length - 1;
+        var j: number = 0;
 
         while (i >= 0 && j < matrix[0].length) {
             if (target > matrix[i][j]) j++;

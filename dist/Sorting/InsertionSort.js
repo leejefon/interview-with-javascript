@@ -10,7 +10,7 @@ System.register([], function(exports_1, context_1) {
                 }
                 InsertionSort.sort = function (arr) {
                     var sorted = [];
-                    for (var i = 0; i < arr.length; i++) {
+                    for (var i in arr) {
                         var item = arr[i];
                         for (var j = 0; j <= sorted.length; j++) {
                             if (j === sorted.length) {

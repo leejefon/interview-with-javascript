@@ -5,7 +5,7 @@ declare var describe: any, it: any, expect: any;
 
 describe("Binary Tree Traversal", () => {
     it("preorder traversal", () => {
-        var tree = new BinaryTree(new Node(50));
+        let tree: BinaryTree = new BinaryTree(new Node(50));
 
         tree.insert(new Node(40));
         tree.insert(new Node(30));
@@ -16,7 +16,7 @@ describe("Binary Tree Traversal", () => {
     });
 
     it("inorder traversal", () => {
-        var tree = new BinaryTree(new Node(50));
+        let tree: BinaryTree = new BinaryTree(new Node(50));
 
         tree.insert(new Node(40));
         tree.insert(new Node(30));
@@ -27,7 +27,7 @@ describe("Binary Tree Traversal", () => {
     });
 
     it("postorder traversal", () => {
-        var tree = new BinaryTree(new Node(50));
+        let tree: BinaryTree = new BinaryTree(new Node(50));
 
         tree.insert(new Node(40));
         tree.insert(new Node(30));
@@ -38,14 +38,14 @@ describe("Binary Tree Traversal", () => {
     });
 
     it("levelorder traversal", () => {
-        var tree = new BinaryTree(new Node(50));
+        let tree: BinaryTree = new BinaryTree(new Node(50));
 
         tree.insert(new Node(40));
         tree.insert(new Node(30));
         tree.insert(new Node(60));
         tree.insert(new Node(70));
 
-        var result = [
+        let result: number[][] = [
             [50],
             [40, 60],
             [30, 70]

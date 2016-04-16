@@ -1,8 +1,8 @@
 
 export class LongestIncreasingSequence {
 
-    static exec(arr: number[]) {
-        var result = Array(arr.length).fill(1);
+    public static exec(arr: number[]): number {
+        var result: number[] = Array(arr.length).fill(1);
 
         for (var i = 1; i < arr.length; i++) {
             for (var j = 0; j < i; j++) {
