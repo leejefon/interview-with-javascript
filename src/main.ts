@@ -20,6 +20,7 @@ import './Tree/TrieSpec';
 import './PriorityQueue/PriorityQueueSpec';
 
 import './Matrix/Search2DMatrixSpec';
+import './Matrix/MatrixSpec';
 
 import './Graph/GraphColoringSpec';
 import './Graph/ReconstructItinerarySpec';

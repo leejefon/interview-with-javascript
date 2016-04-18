@@ -42,6 +42,9 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 ## Matrix
 
+- Matrix
+    - [Transpose](https://en.wikipedia.org/wiki/Transpose)
+    - [Multiply](https://en.wikipedia.org/wiki/Matrix_multiplication)
 - [Search 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 
 
