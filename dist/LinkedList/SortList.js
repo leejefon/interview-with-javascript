@@ -12,13 +12,13 @@ System.register(['./LinkedList'], function(exports_1, context_1) {
             SortList = (function () {
                 function SortList() {
                 }
-                SortList.exec = function (head) {
+                SortList.sort = function (head) {
                     if (!head || !head.next) {
                         return head;
                     }
                     var pointers = this.split(head);
-                    var leftSide = this.exec(pointers.left);
-                    var rightSide = this.exec(pointers.right);
+                    var leftSide = this.sort(pointers.left);
+                    var rightSide = this.sort(pointers.right);
                     return this.merge(leftSide, rightSide);
                 };
                 SortList.split = function (head) {

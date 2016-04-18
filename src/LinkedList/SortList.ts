@@ -2,15 +2,15 @@ import { Node } from './LinkedList';
 
 export class SortList {
 
-    public static exec(head: Node): Node {
+    public static sort(head: Node): Node {
         if (!head || !head.next) {
             return head;
         }
 
         var pointers = this.split(head);
 
-        var leftSide = this.exec(pointers.left);
-        var rightSide = this.exec(pointers.right);
+        var leftSide = this.sort(pointers.left);
+        var rightSide = this.sort(pointers.right);
 
         return this.merge(leftSide, rightSide);
     }

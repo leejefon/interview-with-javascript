@@ -19,7 +19,7 @@ System.register(['./LinkedList', './SortList'], function(exports_1, context_1) {
                     list.append(new LinkedList_1.Node(60));
                     list.append(new LinkedList_1.Node(10));
                     list.append(new LinkedList_1.Node(50));
-                    list.head = SortList_1.SortList.exec(list.head);
+                    list.head = SortList_1.SortList.sort(list.head);
                     expect(list.head.data).toEqual(10);
                     expect(list.head.next.data).toEqual(20);
                     expect(list.head.next.next.data).toEqual(30);

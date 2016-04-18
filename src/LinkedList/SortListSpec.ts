@@ -13,7 +13,7 @@ describe("Sort List", () => {
         list.append(new Node(10));
         list.append(new Node(50));
 
-        list.head = SortList.exec(list.head);
+        list.head = SortList.sort(list.head);
 
         expect(list.head.data).toEqual(10);
         expect(list.head.next.data).toEqual(20);

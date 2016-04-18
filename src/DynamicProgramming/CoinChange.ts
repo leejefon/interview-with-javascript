@@ -1,8 +1,8 @@
 
 export class CoinChange {
+
     public static exec(coins: number[], amount: number): number {
-        var max_coins: number = amount;
-        var results: number[] = Array(amount + 1).fill(max_coins + 1);
+        var results: number[] = Array(amount + 1).fill(amount + 1);
         results[0] = 0;
 
         for (var i = 1; i <= amount; i++) {

@@ -15,6 +15,12 @@ System.register(['./CoinChange'], function(exports_1, context_1) {
                     var result = 3;
                     expect(CoinChange_1.CoinChange.exec(coins, amount)).toEqual(result);
                 });
+                it("should return -1", function () {
+                    var coins = [2, 4];
+                    var amount = 11;
+                    var result = -1;
+                    expect(CoinChange_1.CoinChange.exec(coins, amount)).toEqual(result);
+                });
             });
         }
     }

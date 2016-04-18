@@ -9,8 +9,7 @@ System.register([], function(exports_1, context_1) {
                 function CoinChange() {
                 }
                 CoinChange.exec = function (coins, amount) {
-                    var max_coins = amount;
-                    var results = Array(amount + 1).fill(max_coins + 1);
+                    var results = Array(amount + 1).fill(amount + 1);
                     results[0] = 0;
                     for (var i = 1; i <= amount; i++) {
                         for (var j = 0; j < coins.length; j++) {

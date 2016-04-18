@@ -10,15 +10,11 @@ System.register([], function(exports_1, context_1) {
                 }
                 MaxSubArray.exec = function (arr) {
                     var result = Array(arr.length);
-                    var max = arr[0];
                     result[0] = arr[0];
                     for (var i = 1; i < arr.length; i++) {
                         result[i] = Math.max(arr[i], arr[i] + result[i - 1]);
-                        if (result[i] > max) {
-                            max = result[i];
-                        }
                     }
-                    return max;
+                    return Math.max.apply(Math, result);
                 };
                 return MaxSubArray;
             }());

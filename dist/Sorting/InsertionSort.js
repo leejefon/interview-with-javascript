@@ -9,22 +9,16 @@ System.register([], function(exports_1, context_1) {
                 function InsertionSort() {
                 }
                 InsertionSort.sort = function (arr) {
-                    var sorted = [];
-                    for (var i in arr) {
-                        var item = arr[i];
-                        for (var j = 0; j <= sorted.length; j++) {
-                            if (j === sorted.length) {
-                                sorted.push(item);
-                                break;
-                            }
-                            if (sorted[j] > item) {
-                                var temp = sorted[j];
-                                sorted[j] = item;
-                                item = temp;
+                    for (var i = 0; i < arr.length; i++) {
+                        for (var j = i; j > 0; j--) {
+                            if (arr[j - 1] > arr[j]) {
+                                var temp = arr[j - 1];
+                                arr[j - 1] = arr[j];
+                                arr[j] = temp;
                             }
                         }
                     }
-                    return sorted;
+                    return arr;
                 };
                 return InsertionSort;
             }());
