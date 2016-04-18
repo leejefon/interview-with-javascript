@@ -35,6 +35,11 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 - [Longest Path](http://www.geeksforgeeks.org/diameter-of-a-binary-tree/) - Facebook
 
 
+## PriorityQueue
+
+- [Priority Queue](https://en.wikipedia.org/wiki/Priority_queue)
+
+
 ## Matrix
 
 - [Search 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)

@@ -17,6 +17,8 @@ import './Tree/LongestPathSpec';
 import './Tree/RedBlackTreeSpec';
 import './Tree/TrieSpec';
 
+import './PriorityQueue/PriorityQueueSpec';
+
 import './Matrix/Search2DMatrixSpec';
 
 import './Graph/GraphColoringSpec';
