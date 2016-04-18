@@ -1,7 +1,7 @@
 
-export class CountDigits {
+export class Digit {
 
-    public static exec(n: number, digit: number = 1): number {
+    public static count(n: number, digit: number = 1): number {
         var digits = 0;
         for (let m = 1; m <= n; m *= 10) {
             let a = Math.floor(n / m), b = n % m;
@@ -9,5 +9,9 @@ export class CountDigits {
             console.log(digits);
         }
         return digits;
+    }
+
+    public static root(n: number) {
+        return 1 + (n - 1) % 9;
     }
 }

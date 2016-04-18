@@ -28,4 +28,4 @@ import './Sorting/SortingSpec';
 import './HashTable/HashTablespec';
 
 import './Other/BitManipulationSpec';
-import './Other/CountDigitsSpec';
+import './Other/DigitSpec';

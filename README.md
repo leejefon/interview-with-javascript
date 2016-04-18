@@ -65,7 +65,9 @@ Interview Problems solved with JavaScript ES6 (TypeScript)
 
 ## Other
 
-- [CountDigits](https://leetcode.com/discuss/44281/4-lines-o-log-n-c-java-python)
+- Digit
+    - [CountDigits](https://leetcode.com/discuss/44281/4-lines-o-log-n-c-java-python)
+    - [AddDigits](https://leetcode.com/discuss/52122/accepted-time-space-line-solution-with-detail-explanations)
 - BitManipulation
     - [SwapWithoutTemp](http://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/)
     - [AddWithoutPlus](http://www.geeksforgeeks.org/add-two-numbers-without-using-arithmetic-operators/)
