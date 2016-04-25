@@ -12,6 +12,17 @@ System.register([], function(exports_1, context_1) {
                 Node.prototype.printNode = function () {
                     console.log(this.data);
                 };
+                Node.prototype.toArray = function (head) {
+                    var result = [];
+                    if (!head) {
+                        head = this;
+                    }
+                    result.push(head.data);
+                    if (head.next) {
+                        result = result.concat(this.toArray(head.next));
+                    }
+                    return result;
+                };
                 return Node;
             }());
             exports_1("Node", Node);

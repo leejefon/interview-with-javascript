@@ -1,4 +1,4 @@
-System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec', './Array/LongestUniqueLettersSpec', './Array/ThreeSumSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './DynamicProgramming/CoinChangeSpec', './DynamicProgramming/WordBreakSpec', './LinkedList/LinkedListSpec', './LinkedList/SortListSpec', './Tree/BinaryTreeSpec', './Tree/TreeTraversalSpec', './Tree/LongestPathSpec', './Tree/RedBlackTreeSpec', './Tree/TrieSpec', './PriorityQueue/PriorityQueueSpec', './Matrix/Search2DMatrixSpec', './Matrix/MatrixSpec', './Graph/GraphColoringSpec', './Graph/ReconstructItinerarySpec', './Graph/SkylineSpec', './Graph/ValidSudokuSpec', './Sorting/SortingSpec', './HashTable/HashTablespec', './Other/BitManipulationSpec', './Other/DigitSpec'], function(exports_1, context_1) {
+System.register(['./Array/ContactDeduplicationSpec', './Array/LongestUniqueLettersSpec', './Array/MoveZeroesSpec', './Array/ReversePolishNotationSpec', './Array/RotateArraySpec', './Array/ThreeSumSpec', './DynamicProgramming/CoinChangeSpec', './DynamicProgramming/LongestIncreasingSequenceSpec', './DynamicProgramming/MaxSubArraySpec', './DynamicProgramming/RobotMovesSpec', './DynamicProgramming/WordBreakSpec', './Graph/GraphColoringSpec', './Graph/ReconstructItinerarySpec', './Graph/SkylineSpec', './Graph/ValidSudokuSpec', './HashTable/HashTablespec', './LinkedList/LinkedListSpec', './LinkedList/ReverseLinkedListSpec', './LinkedList/SortListSpec', './Matrix/MatrixSpec', './Matrix/Search2DMatrixSpec', './Other/BitManipulationSpec', './Other/DigitSpec', './PriorityQueue/PriorityQueueSpec', './Recursive/LetterCombinationsOfPhoneNumberSpec', './Recursive/LetterMappingSpec', './Sorting/SortingSpec', './Tree/BinaryTreeSpec', './Tree/LongestPathSpec', './Tree/RedBlackTreeSpec', './Tree/TreeTraversalSpec', './Tree/TrieSpec'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     return {
@@ -28,7 +28,13 @@ System.register(['./Array/RotateArraySpec', './Array/ReversePolishNotationSpec',
             function (_23) {},
             function (_24) {},
             function (_25) {},
-            function (_26) {}],
+            function (_26) {},
+            function (_27) {},
+            function (_28) {},
+            function (_29) {},
+            function (_30) {},
+            function (_31) {},
+            function (_32) {}],
         execute: function() {
         }
     }

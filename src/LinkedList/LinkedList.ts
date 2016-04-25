@@ -11,6 +11,22 @@ export class Node {
     public printNode(): void {
         console.log(this.data);
     }
+
+    public toArray(head?: Node): any[] {
+        var result: any[] = [];
+
+        if (!head) {
+            head = this;
+        }
+
+        result.push(head.data);
+
+        if (head.next) {
+            result = result.concat(this.toArray(head.next));
+        }
+
+        return result;
+    }
 }
 
 export class List {
