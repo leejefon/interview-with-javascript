@@ -1,65 +1,64 @@
 import { Node } from './LinkedList';
 
 export class SortList {
-
-    public static sort(head: Node): Node {
-        if (!head || !head.next) {
-            return head;
-        }
-
-        var pointers = this.split(head);
-
-        var leftSide = this.sort(pointers.left);
-        var rightSide = this.sort(pointers.right);
-
-        return this.merge(leftSide, rightSide);
+  public static sort(head: Node): Node {
+    if (!head || !head.next) {
+      return head;
     }
 
-    private static split (head: Node): { left: Node, right: Node } {
-        var slow: Node;
-        var fast: Node;
+    var pointers = this.split(head);
 
-        var leftList: Node = head;
-        var rightList: Node;
+    var leftSide = this.sort(pointers.left);
+    var rightSide = this.sort(pointers.right);
 
-        if (!head || !head.next) {
-            rightList = null;
-        } else {
-            slow = head;
-            fast = head.next;
+    return this.merge(leftSide, rightSide);
+  }
 
-            while (fast) {
-                fast = fast.next;
-                if (fast) {
-                    slow = slow.next;
-                    fast = fast.next;
-                }
-            }
+  private static split (head: Node): { left: Node, right: Node } {
+    var slow: Node;
+    var fast: Node;
 
-            rightList = slow.next;
-            delete slow.next;
+    var leftList: Node = head;
+    var rightList: Node;
+
+    if (!head || !head.next) {
+      rightList = null;
+    } else {
+      slow = head;
+      fast = head.next;
+
+      while (fast) {
+        fast = fast.next;
+        if (fast) {
+          slow = slow.next;
+          fast = fast.next;
         }
+      }
 
-        return {
-            left: leftList,
-            right: rightList
-        };
+      rightList = slow.next;
+      delete slow.next;
     }
 
-    private static merge (leftSide, rightSide): Node {
-        var newHead: Node;
+    return {
+      left: leftList,
+      right: rightList
+    };
+  }
 
-        if (!leftSide) return rightSide;
-        if (!rightSide) return leftSide;
+  private static merge (leftSide, rightSide): Node {
+    var newHead: Node;
 
-        if (leftSide.data < rightSide.data) {
-            newHead = new Node(leftSide.data);
-            newHead.next = this.merge(leftSide.next, rightSide);
-        } else {
-            newHead = new Node(rightSide.data);
-            newHead.next = this.merge(leftSide, rightSide.next);
-        }
+    if (!leftSide) return rightSide;
+    if (!rightSide) return leftSide;
 
-        return newHead;
+    if (leftSide.data < rightSide.data) {
+      newHead = new Node(leftSide.data);
+      newHead.next = this.merge(leftSide.next, rightSide);
+    } else {
+      newHead = new Node(rightSide.data);
+      newHead.next = this.merge(leftSide, rightSide.next);
     }
+
+    return newHead;
+  }
 }

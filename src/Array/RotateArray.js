@@ -1,17 +1,15 @@
+export class RotateArray {  
+  public static exec (arr: number[], k: number): number[] {
+    if (k > arr.length) return null;
 
-export class RotateArray {
+    var firstHalf = [];
+    var secondHalf = [];
 
-    public static exec (arr: number[], k: number): number[] {
-        if (k > arr.length) return null;
-
-        var firstHalf = [];
-        var secondHalf = [];
-
-        for (var i = 0; i < arr.length; i++) {
-            if (i < k) firstHalf.push(arr[i]);
-            else secondHalf.push(arr[i]);
-        }
-
-        return secondHalf.concat(firstHalf);
+    for (var i = 0; i < arr.length; i++) {
+      if (i < k) firstHalf.push(arr[i]);
+      else secondHalf.push(arr[i]);
     }
+
+    return secondHalf.concat(firstHalf);
+  }
 }
