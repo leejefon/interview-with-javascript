@@ -1,4 +1,4 @@
-Interview Problems solved with JavaScript ES6 (TypeScript)
+Interview Problems solved with JavaScript ES6
 ==========================================================
 
 ## Array
