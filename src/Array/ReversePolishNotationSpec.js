@@ -1,11 +1,9 @@
 import test from 'ava';
 import ReversePolishNotation from './ReversePolishNotation';
 
-// describe("Evaluate Reverse Polish Notation (Stack)", () => {
-//   it("should work", () => {
-//     let arr: string[] = ["2", "1", "+", "3", "*"];
-//     let result: number = 9;
-//
-//     expect(ReversePolishNotation.exec(arr)).toEqual(result);
-//   });
-// });
+test('Evaluate Reverse Polish Notation (Stack)', (t) => {
+  const arr = ['2', '1', '+', '3', '*'];
+  const result = 9;
+
+  t.deepEqual(ReversePolishNotation.exec(arr), result);
+});

@@ -1,20 +1,18 @@
 import test from 'ava';
 import CoinChange from './CoinChange';
 
-// describe("Coin Change", () => {
-//   it("should work", () => {
-//     let coins: number[] = [1, 2, 5];
-//     let amount: number = 11;
-//     let result: number = 3;
-//
-//     expect(CoinChange.exec(coins, amount)).toEqual(result);
-//   });
-//
-//   it("should return -1", () => {
-//     let coins: number[] = [2, 4];
-//     let amount: number = 11;
-//     let result: number = -1;
-//
-//     expect(CoinChange.exec(coins, amount)).toEqual(result);
-//   });
-// });
+test('Coin Change', (t) => {
+  const coins = [1, 2, 5];
+  const amount = 11;
+  const result = 3;
+
+  t.is(CoinChange.exec(coins, amount), result);
+});
+
+test('Coin Change', (t) => {
+  const coins = [2, 4];
+  const amount = 11;
+  const result = -1;
+
+  t.is(CoinChange.exec(coins, amount), result);
+});

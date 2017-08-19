@@ -1,12 +1,10 @@
 import test from 'ava';
 import RotateArray from './RotateArray';
 
-// describe("Rotate Array", () => {
-//   it("should rotate", () => {
-//     let arr: number[] = [1, 2, 3, 4, 5, 6, 7];
-//     let k: number = 4;
-//     let result: number[] = [5, 6, 7, 1, 2, 3, 4];
-//
-//     expect(RotateArray.exec(arr, k)).toEqual(result);
-//   });
-// });
+test('Rotate Array', (t) => {
+  const arr = [1, 2, 3, 4, 5, 6, 7];
+  const k = 4;
+  const result = [5, 6, 7, 1, 2, 3, 4];
+
+  t.deepEqual(RotateArray.exec(arr, k), result);
+});

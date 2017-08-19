@@ -1,5 +1,5 @@
 class ThreeSum {
-  static exec(arr, sum) {
+  static exec(arr, sum = 0) {
     var results = [];
 
     arr.sort();
