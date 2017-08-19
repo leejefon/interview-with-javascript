@@ -65,7 +65,7 @@ class RedBlackTree extends BinaryTree {
     this.root.color = Color.BLACK;
   }
 
-  otateRight(node, parent) {
+  rotateRight(node, parent) {
     let x = node.left;
     node.left = x.right;
     x.right = node;
@@ -76,7 +76,7 @@ class RedBlackTree extends BinaryTree {
     }
   }
 
-  otateLeft(node, parent) {
+  rotateLeft(node, parent) {
     let x = node.right;
     node.right = x.left;
     x.left = node;

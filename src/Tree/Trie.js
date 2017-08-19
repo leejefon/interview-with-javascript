@@ -1,4 +1,4 @@
-const HashTable = require('../HashTable/HashTable');
+const { HashTable } = require('../HashTable/HashTable');
 
 class TrieNode {
   constructor(char) {

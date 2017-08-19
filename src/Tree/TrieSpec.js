@@ -1,16 +1,14 @@
 import test from 'ava';
 import { Trie, TrieNode } from './Trie';
 
-// describe("Trie Test", () => {
-//   it("insert and search", () => {
-//     let trie: Trie = new Trie();
-//
-//     trie.insert('abc');
-//     trie.insert('abcde');
-//
-//     expect(trie.search('abc')).toEqual(true);
-//     expect(trie.search('abcde')).toEqual(true);
-//     expect(trie.search('a')).toEqual(false);
-//     expect(trie.search('abcd')).toEqual(false);
-//   });
-// });
+test('Trie Test', (t) => {
+  const trie = new Trie();
+
+  trie.insert('abc');
+  trie.insert('abcde');
+
+  t.true(trie.search('abc'));
+  t.true(trie.search('abcde'));
+  t.false(trie.search('a'));
+  t.false(trie.search('abcd'));
+});

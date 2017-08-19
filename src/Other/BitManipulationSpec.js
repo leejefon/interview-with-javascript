@@ -1,33 +1,31 @@
 import test from 'ava';
 import BitManipulation from './BitManipulation';
 
-// describe("Bit Manipulations", () => {
-//   it("Swap without temp variable", () => {
-//     let a = [1, 2];
-//     let result = [2, 1];
-//
-//     BitManipulation.swapWithoutTemp(a, 0, 1)
-//     expect(a).toEqual(result);
-//   });
-//
-//   it("add without arithmetic operators", () => {
-//     let a = 3, b = 5;
-//     let result = 8;
-//
-//     expect(BitManipulation.addWithoutPlus(a, b)).toEqual(result);
-//   });
-//
-//   it("compare numbers without if", () => {
-//     let a = 3, b = 5;
-//     let result = 5;
-//
-//     expect(BitManipulation.compareWithoutIf(a, b)).toEqual(result);
-//   });
-//
-//   it("find single number", () => {
-//     let arr = [1, 2, 3, 2, 1];
-//     let result = 3;
-//
-//     expect(BitManipulation.singleNumber(arr)).toEqual(result);
-//   });
-// });
+test('Bit Manipulations - Swap without temp variable', (t) => {
+  let a = [1, 2];
+  const result = [2, 1];
+
+  BitManipulation.swapWithoutTemp(a, 0, 1);
+  t.deepEqual(a, result);
+});
+
+test('Bit Manipulations - add without arithmetic operators', (t) => {
+  const a = 3, b = 5;
+  const result = 8;
+
+  t.is(BitManipulation.addWithoutPlus(a, b), result);
+});
+
+test('Bit Manipulations - compare numbers without if', (t) => {
+  const a = 3, b = 5;
+  const result = 5;
+
+  t.is(BitManipulation.compareWithoutIf(a, b), result);
+});
+
+test('Bit Manipulations - find single number', (t) => {
+  const arr = [1, 2, 3, 2, 1];
+  const result = 3;
+
+  t.is(BitManipulation.singleNumber(arr), result);
+});

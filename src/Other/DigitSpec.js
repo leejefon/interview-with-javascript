@@ -1,12 +1,10 @@
 import test from 'ava';
 import Digit from './Digit';
 
-// describe("Digit", () => {
-//   it("Count digit 1s", () => {
-//     expect(Digit.count(99)).toEqual(20);
-//   });
-//
-//   it("repeatedly add digits", () => {
-//     expect(Digit.root(38)).toEqual(2);
-//   });
-// });
+test('Digit - Count digit 1s', (t) => {
+  t.is(Digit.count(99), 20);
+});
+
+test('Digit - repeatedly add digits', (t) => {
+  t.is(Digit.root(38), 2);
+});
