@@ -1,16 +1,16 @@
 class ThreeSum {
   static exec(arr, sum = 0) {
-    var results = [];
+    const results = [];
 
     arr.sort();
 
     for (let i = 0; i < arr.length - 2; i++) {
       if (i === 0 || (i > 0 && arr[i] !== arr[i - 1])) {
-        var lowIndex = i + 1;
-        var highIndex = arr.length - 1;
+        let lowIndex = i + 1;
+        let highIndex = arr.length - 1;
 
         while (lowIndex < highIndex) {
-          var currSum = arr[lowIndex] + arr[highIndex] + arr[i];
+          const currSum = arr[lowIndex] + arr[highIndex] + arr[i];
 
           if (currSum === sum) {
             results.push([arr[i], arr[lowIndex], arr[highIndex]]);

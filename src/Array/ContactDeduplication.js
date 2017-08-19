@@ -6,7 +6,7 @@ class Contact {
 
 class ContactDeduplication {
   static exec(contacts) {
-    let emails = {};
+    const emails = {};
     contacts.forEach(contact => {
       contact.emails.forEach(email => {
         if (emails[email]) {
@@ -17,10 +17,10 @@ class ContactDeduplication {
       });
     });
 
-    var mergedEmails = [];
+    const mergedEmails = [];
     for (const email in emails) {
-      var added = false;
-      for (var i in mergedEmails) {
+      let added = false;
+      for (const i in mergedEmails) {
         if (mergedEmails[i].indexOf(email) !== -1) {
           mergedEmails[i] = this.union(mergedEmails[i], emails[email]);
           added = true;
@@ -31,7 +31,7 @@ class ContactDeduplication {
       }
     }
 
-    var mergedContacts = [];
+    const mergedContacts = [];
     for (const i in mergedEmails) {
       mergedContacts.push(new Contact(mergedEmails[i]));
     }

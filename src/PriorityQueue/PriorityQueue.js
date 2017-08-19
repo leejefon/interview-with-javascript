@@ -23,7 +23,7 @@ class PriorityQueue {
   offer(item) {
     for (let i = 0; i < this.queue.length; i++) {
       if (this.comparator(item, this.queue[i]) > 0) {
-        var temp = this.queue[i];
+        const temp = this.queue[i];
         this.queue[i] = item;
         item = temp;
       }
@@ -34,7 +34,7 @@ class PriorityQueue {
   }
 
   poll() {
-    var item = this.queue.shift();
+    const item = this.queue.shift();
     return item;
   }
 

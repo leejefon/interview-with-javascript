@@ -15,11 +15,11 @@ class LetterCombinationsOfPhoneNumber {
 
     if (phone.length === 1) return phoneNumberMapping[phone];
 
-    var result = [];
+    const result = [];
 
-    var rest = this.exec(phone.slice(1));
+    const rest = this.exec(phone.slice(1));
 
-    for (var a of phoneNumberMapping[phone.charAt(0)]) {
+    for (const a of phoneNumberMapping[phone.charAt(0)]) {
       for (const i in rest) {
         result.push(a + rest[i]);
       }

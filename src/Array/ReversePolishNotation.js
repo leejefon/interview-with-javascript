@@ -1,27 +1,28 @@
 class ReversePolishNotation {
   static exec(tokens) {
-    var stack = [];
+    const stack = [];
+    let a, b;
 
     tokens.forEach(token => {
       switch (token) {
         case '+':
-          var a = stack.pop();
-          var b = stack.pop();
+          a = stack.pop();
+          b = stack.pop();
           stack.push(b + a);
           break;
         case '-':
-          var a = stack.pop();
-          var b = stack.pop();
+          a = stack.pop();
+          b = stack.pop();
           stack.push(b - a);
           break;
         case '*':
-          var a = stack.pop();
-          var b = stack.pop();
+          a = stack.pop();
+          b = stack.pop();
           stack.push(b * a);
           break;
         case '/':
-          var a = stack.pop();
-          var b = stack.pop();
+          a = stack.pop();
+          b = stack.pop();
           stack.push(b / a);
           break;
         default:

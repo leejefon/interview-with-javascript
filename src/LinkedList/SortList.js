@@ -6,20 +6,20 @@ class SortList {
       return head;
     }
 
-    var pointers = this.split(head);
+    const pointers = this.split(head);
 
-    var leftSide = this.sort(pointers.left);
-    var rightSide = this.sort(pointers.right);
+    const leftSide = this.sort(pointers.left);
+    const rightSide = this.sort(pointers.right);
 
     return this.merge(leftSide, rightSide);
   }
 
   static split (head) {
-    var slow;
-    var fast;
+    let slow;
+    let fast;
 
-    var leftList = head;
-    var rightList;
+    const leftList = head;
+    let rightList;
 
     if (!head || !head.next) {
       rightList = null;

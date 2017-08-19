@@ -18,7 +18,7 @@ class BitManipulation {
 
   static singleNumber(arr) {
     let result = 0;
-    for (var a of arr) {
+    for (const a of arr) {
       result ^= a;
     }
     return result;

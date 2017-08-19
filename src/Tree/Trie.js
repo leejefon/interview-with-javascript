@@ -23,9 +23,9 @@ class Trie {
       return;
     }
 
-    var char = str.charAt(0);
-    var children = root.children;
-    var node = children.get(char.charCodeAt(0));
+    const char = str.charAt(0);
+    const children = root.children;
+    let node = children.get(char.charCodeAt(0));
 
     if (!node) {
       node = new TrieNode(char);
@@ -35,10 +35,10 @@ class Trie {
   }
 
   search(str) {
-    var currRoot = this.root;
+    let currRoot = this.root;
 
-    for (var i = 0; i < str.length; i++) {
-      var node = currRoot.children.get(str.charCodeAt(i));
+    for (let i = 0; i < str.length; i++) {
+      const node = currRoot.children.get(str.charCodeAt(i));
       if (node) {
         currRoot = node;
       } else {

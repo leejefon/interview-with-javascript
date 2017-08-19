@@ -1,10 +1,10 @@
 class LongestUniqueLetters {
   static exec(str) {
-    var strNoRepeat = [];
-    var longest = 0;
+    let strNoRepeat = [];
+    let longest = 0;
 
     for (let i = 0; i < str.length; i++) {
-      var index = strNoRepeat.indexOf(str.charAt(i));
+      const index = strNoRepeat.indexOf(str.charAt(i));
       if (index !== -1) {
         strNoRepeat = strNoRepeat.slice(index + 1);
         strNoRepeat.push(str.charAt(i));

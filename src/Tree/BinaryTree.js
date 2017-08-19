@@ -6,8 +6,8 @@ class Node {
   getParent(root) {
     if (!root) return null;
 
-    var left = null;
-    var right = null;
+    let left = null;
+    let right = null;
 
     if (JSON.stringify(root.left) === JSON.stringify(this) || JSON.stringify(root.right) === JSON.stringify(this)) {
       return root;
@@ -22,8 +22,8 @@ class Node {
   getUncle(root) {
     if (!root) return null;
 
-    var parent = this.getParent(root);
-    var grandParent = parent ? parent.getParent(root) : null;
+    const parent = this.getParent(root);
+    const grandParent = parent ? parent.getParent(root) : null;
 
     if (!grandParent) return null;
     else if (this.data > grandParent.data) return grandParent.left;

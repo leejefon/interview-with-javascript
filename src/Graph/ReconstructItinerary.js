@@ -1,7 +1,7 @@
 class ReconstructItinerary {
   static exec(tickets, startCity = 'JFK') {
-    var result = [];
-    var map = {};
+    const result = [];
+    const map = {};
 
     for (const i in tickets) {
       if (!map[tickets[i][0]]) {
@@ -14,10 +14,10 @@ class ReconstructItinerary {
       map[key].sort();
     }
 
-    var reversedStack = [startCity];
+    const reversedStack = [startCity];
     while (reversedStack.length > 0) {
       if (map[reversedStack[0]] && map[reversedStack[0]].length > 0) {
-        var destination =  map[reversedStack[0]].shift();
+        const destination =  map[reversedStack[0]].shift();
         reversedStack.unshift(destination);
       } else {
         result.unshift(reversedStack[0]);

@@ -8,7 +8,7 @@ class Node {
   }
 
   toArray(head) {
-    var result = [];
+    let result = [];
 
     if (!head) {
       head = this;
@@ -39,7 +39,7 @@ class List {
   }
 
   printList() {
-    var temp = this.head;
+    let temp = this.head;
 
     while (temp) {
       temp.printNode();

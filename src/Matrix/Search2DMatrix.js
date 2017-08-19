@@ -1,7 +1,7 @@
 class Search2DMatrix {
   static exec(matrix, target) {
-    var i = matrix.length - 1;
-    var j = 0;
+    let i = matrix.length - 1;
+    let j = 0;
 
     while (i >= 0 && j < matrix[0].length) {
       if (target > matrix[i][j]) j++;

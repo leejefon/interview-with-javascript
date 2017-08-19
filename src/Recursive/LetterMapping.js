@@ -17,17 +17,17 @@ class LetterMapping {
       result.push(letterMapping[num - 1]);
     }
 
-    var first = letterMapping[parseInt(Number(num).toString().charAt(0)) - 1];
-    var rest1 = this.exec(parseInt(Number(num).toString().slice(1)));
-    for (var i in rest1) {
+    const first = letterMapping[parseInt(Number(num).toString().charAt(0)) - 1];
+    const rest1 = this.exec(parseInt(Number(num).toString().slice(1)));
+    for (const i in rest1) {
       result.push(first + rest1[i]);
     }
 
-    var secondIndex = parseInt(Number(num).toString().substr(0, 2)) - 1;
+    const secondIndex = parseInt(Number(num).toString().substr(0, 2)) - 1;
     if (secondIndex < 26) {
-      var second = letterMapping[secondIndex];
-      var rest2 = this.exec(parseInt(Number(num).toString().slice(2)));
-      for (var j in rest2) {
+      const second = letterMapping[secondIndex];
+      const rest2 = this.exec(parseInt(Number(num).toString().slice(2)));
+      for (const j in rest2) {
         result.push(second + rest2[j]);
       }
     }

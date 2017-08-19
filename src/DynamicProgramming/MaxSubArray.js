@@ -1,6 +1,6 @@
 class MaxSubArray {
   static exec(arr) {
-    var result = Array(arr.length);
+    const result = Array(arr.length);
     result[0] = arr[0];
 
     for (let i = 1; i < arr.length; i++) {

@@ -4,10 +4,10 @@ class MergeSort {
       return arr;
     }
 
-    var partitions = this.partition(arr);
+    const partitions = this.partition(arr);
 
-    var left = this.sort(partitions.left);
-    var right = this.sort(partitions.right);
+    const left = this.sort(partitions.left);
+    const right = this.sort(partitions.right);
 
     return this.merge(left, right);
   }
@@ -20,7 +20,7 @@ class MergeSort {
   }
 
   static merge(left, right) {
-    var merged = [];
+    let merged = [];
 
     if (left.length === 0) return right;
     if (right.length === 0) return left;

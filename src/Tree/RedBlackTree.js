@@ -25,9 +25,9 @@ class RedBlackTree extends BinaryTree {
   }
 
   adjustTree(node) {
-    var parent = node.getParent(this.root);
-    var uncle = node.getUncle(this.root);
-    var grandParent = parent ? parent.getParent(this.root) : null;
+    const parent = node.getParent(this.root);
+    const uncle = node.getUncle(this.root);
+    const grandParent = parent ? parent.getParent(this.root) : null;
 
     if (node &&
       JSON.stringify(node) !== JSON.stringify(this.root) &&

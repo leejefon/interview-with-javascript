@@ -1,10 +1,10 @@
 class ValidSudoku {
   static exec(board) {
-    var sudokuSize = board.length;
+    const sudokuSize = board.length;
 
-    var rowCheck = [];
-    var colCheck = [];
-    var boxCheck = [];
+    const rowCheck = [];
+    const colCheck = [];
+    const boxCheck = [];
 
     for (let i = 0; i < sudokuSize; i++) {
       rowCheck.push([]);
@@ -20,8 +20,8 @@ class ValidSudoku {
     for (let i = 0; i < sudokuSize; i++) {
       for (let j = 0; j < sudokuSize; j++) {
         if (board[i][j] !== 0) {
-          var num = board[i][j] - 1;
-          var box = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+          const num = board[i][j] - 1;
+          const box = Math.floor(i / 3) * 3 + Math.floor(j / 3);
 
           if (rowCheck[i][num] || colCheck[j][num] || boxCheck[box][num]) {
             return false;

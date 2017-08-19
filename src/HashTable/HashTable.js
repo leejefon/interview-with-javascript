@@ -20,8 +20,8 @@ class HashTable {
   }
 
   get(key) {
-    var hash = key % this.TABLE_SIZE;
-    var originalHash = hash;
+    let hash = key % this.TABLE_SIZE;
+    const originalHash = hash;
 
     while (this.table[hash] && this.table[hash].getKey() !== key) {
       hash = (hash + 1) % this.TABLE_SIZE;
@@ -39,8 +39,8 @@ class HashTable {
   }
 
   put(key, value) {
-    var hash = key % this.TABLE_SIZE;
-    var originalHash = hash;
+    let hash = key % this.TABLE_SIZE;
+    const originalHash = hash;
 
     while (this.table[hash] && this.table[hash].getKey() !== key) {
       hash = (hash + 1) % this.TABLE_SIZE;

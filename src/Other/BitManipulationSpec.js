@@ -2,7 +2,7 @@ import test from 'ava';
 import BitManipulation from './BitManipulation';
 
 test('Bit Manipulations - Swap without temp variable', (t) => {
-  let a = [1, 2];
+  const a = [1, 2]; // Will be swapped, but const still works..
   const result = [2, 1];
 
   BitManipulation.swapWithoutTemp(a, 0, 1);

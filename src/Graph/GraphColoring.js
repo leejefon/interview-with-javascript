@@ -8,7 +8,7 @@ class GraphColoring {
   solve(v = 0){
     if (v === this.graph.length) return this.colors;
 
-    for (var color = 1; color <= this.numColors; color++) {
+    for (let color = 1; color <= this.numColors; color++) {
       if (this.checkNeighbours(v, color)) {
         this.colors[v] = color;
         return this.solve(v + 1);

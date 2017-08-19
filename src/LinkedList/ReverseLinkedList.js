@@ -2,7 +2,7 @@ const Node = require('./LinkedList').Node;
 
 class ReverseLinkedList {
   static exec(head) {
-    var newHead = null;
+    let newHead = null;
 
     while (head) {
       const next = head.next;
