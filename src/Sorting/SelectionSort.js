@@ -1,4 +1,4 @@
-export class SelectionSort {
+class SelectionSort {
   static sort(arr) {
     for (var i = 0; i < arr.length; i++) {
       var minIndex = i;
@@ -15,3 +15,5 @@ export class SelectionSort {
     return arr;
   }
 }
+
+module.exports = SelectionSort;

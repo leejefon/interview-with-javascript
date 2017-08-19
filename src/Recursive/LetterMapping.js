@@ -1,23 +1,23 @@
-export class LetterMapping {
-  static letterMapping = [
-    'A', 'B', 'C', 'D', 'E',
-    'F', 'G', 'H', 'I', 'J',
-    'K', 'L', 'M', 'N', 'O',
-    'P', 'Q', 'R', 'S', 'T',
-    'U', 'V', 'W', 'X', 'Y',
-    'Z'
-  ];
-
+class LetterMapping {
   static exec(num) {
+    const letterMapping = [
+      'A', 'B', 'C', 'D', 'E',
+      'F', 'G', 'H', 'I', 'J',
+      'K', 'L', 'M', 'N', 'O',
+      'P', 'Q', 'R', 'S', 'T',
+      'U', 'V', 'W', 'X', 'Y',
+      'Z'
+    ];
+
     if (!num) return [];
 
-    var result = [];
+    const result = [];
 
     if (num <= 26) {
-      result.push(this.letterMapping[num - 1]);
+      result.push(letterMapping[num - 1]);
     }
 
-    var first = this.letterMapping[parseInt(Number(num).toString().charAt(0)) - 1];
+    var first = letterMapping[parseInt(Number(num).toString().charAt(0)) - 1];
     var rest1 = this.exec(parseInt(Number(num).toString().slice(1)));
     for (var i in rest1) {
       result.push(first + rest1[i]);
@@ -25,7 +25,7 @@ export class LetterMapping {
 
     var secondIndex = parseInt(Number(num).toString().substr(0, 2)) - 1;
     if (secondIndex < 26) {
-      var second = this.letterMapping[secondIndex];
+      var second = letterMapping[secondIndex];
       var rest2 = this.exec(parseInt(Number(num).toString().slice(2)));
       for (var j in rest2) {
         result.push(second + rest2[j]);
@@ -35,3 +35,5 @@ export class LetterMapping {
     return result;
   }
 }
+
+module.exports = LetterMapping;

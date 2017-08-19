@@ -1,6 +1,6 @@
-import { HashTable } from '../HashTable/HashTable';
+const HashTable = require('../HashTable/HashTable');
 
-export class TrieNode {
+class TrieNode {
   constructor(char) {
     if (char) this.char = char;
     this.children = new HashTable(26);
@@ -8,7 +8,7 @@ export class TrieNode {
   }
 }
 
-export class Trie {
+class Trie {
   constructor() {
     this.root = new TrieNode();
   }
@@ -34,7 +34,7 @@ export class Trie {
     return this.insertHelper(node, str.substring(1));
   }
 
-  search(str): boolean {
+  search(str) {
     var currRoot = this.root;
 
     for (var i = 0; i < str.length; i++) {
@@ -50,3 +50,8 @@ export class Trie {
     else return false;
   }
 }
+
+module.exports = {
+  TrieNode,
+  Trie
+};

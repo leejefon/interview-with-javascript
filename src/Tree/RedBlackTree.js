@@ -1,11 +1,12 @@
-import { BinaryTree, Node } from './BinaryTree';
+const BinaryTree = require('./BinaryTree').BinaryTree;
+const Node = require('./BinaryTree').Node;
 
-export enum Color {
-  RED,
-  BLACK
-}
+const Color = {
+  RED: 'RED',
+  BLACK: 'BLACK'
+};
 
-export class RedBlackNode extends Node {
+class RedBlackNode extends Node {
   constructor(initData) {
     super(initData);
     this.color = Color.BLACK;
@@ -16,7 +17,7 @@ export class RedBlackNode extends Node {
   }
 }
 
-export class RedBlackTree extends BinaryTree {
+class RedBlackTree extends BinaryTree {
   insert(node) {
     node.color = Color.RED;
     super.insert(node);
@@ -86,3 +87,9 @@ export class RedBlackTree extends BinaryTree {
     }
   }
 }
+
+module.exports = {
+  Color,
+  RedBlackNode,
+  RedBlackTree
+};

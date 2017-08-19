@@ -1,6 +1,6 @@
-import { Node } from './BinaryTree';
+const Node = require('./BinaryTree').Node;
 
-export class LongestPath {
+class LongestPath {
   static exec(root) {
     if (!root) {
       return {
@@ -18,3 +18,5 @@ export class LongestPath {
     };
   }
 }
+
+module.exports = LongestPath;

@@ -1,4 +1,4 @@
-export class Node {
+class Node {
   constructor(data) {
     this.data = data;
   }
@@ -24,7 +24,7 @@ export class Node {
   }
 }
 
-export class List {
+class List {
   constructor(initData) {
     this.head = new Node(initData);
   }
@@ -47,3 +47,8 @@ export class List {
     }
   }
 }
+
+module.exports = {
+  Node,
+  List
+};

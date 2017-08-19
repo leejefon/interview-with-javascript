@@ -1,4 +1,4 @@
-export class RotateArray {
+class RotateArray {
   static exec (arr, k) {
     if (k > arr.length) return null;
 
@@ -13,3 +13,5 @@ export class RotateArray {
     return secondHalf.concat(firstHalf);
   }
 }
+
+module.exports = RotateArray;

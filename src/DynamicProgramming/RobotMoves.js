@@ -1,4 +1,4 @@
-export class RobotMoves {
+class RobotMoves {
   static exec(board) {
     var width = board[0].length;
     var dp = Array(width).fill(0);
@@ -17,3 +17,5 @@ export class RobotMoves {
     return dp[width - 1];
   }
 }
+
+module.exports = RobotMoves;

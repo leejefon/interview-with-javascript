@@ -1,10 +1,10 @@
-export class QuickSort {
+class QuickSort {
   static sort(arr) {
     this.quicksort(arr, 0, arr.length - 1);
     return arr;
   }
 
-  private static quicksort(arr, lowIndex, highIndex) {
+  static quicksort(arr, lowIndex, highIndex) {
     if (lowIndex >= highIndex) return;
 
     var pivot = arr[Math.floor((highIndex + lowIndex) / 2)]
@@ -27,3 +27,5 @@ export class QuickSort {
     if (highIndex > i) this.quicksort(arr, i, highIndex);
   }
 }
+
+module.exports = QuickSort;

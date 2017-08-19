@@ -1,4 +1,4 @@
-export class MaxSubArray {
+class MaxSubArray {
   static exec(arr) {
     var result = Array(arr.length);
     result[0] = arr[0];
@@ -10,3 +10,5 @@ export class MaxSubArray {
     return Math.max(...result);
   }
 }
+
+module.exports = MaxSubArray;

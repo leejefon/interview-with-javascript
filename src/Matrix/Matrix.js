@@ -1,4 +1,4 @@
-export class Matrix {
+class Matrix {
   constructor(matrix) {
     this.matrix = matrix;
   }
@@ -35,3 +35,5 @@ export class Matrix {
     return new Matrix(newMatrix);
   }
 }
+
+module.exports = Matrix;

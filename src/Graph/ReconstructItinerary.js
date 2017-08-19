@@ -1,4 +1,4 @@
-export class ReconstructItinerary {
+class ReconstructItinerary {
   static exec(tickets, startCity = 'JFK') {
     var result = [];
     var map = {};
@@ -28,3 +28,5 @@ export class ReconstructItinerary {
     return result;
   }
 }
+
+module.exports = ReconstructItinerary;

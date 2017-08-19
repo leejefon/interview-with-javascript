@@ -1,6 +1,6 @@
-import { Node } from './BinaryTree';
+const Node = require('./BinaryTree').Node;
 
-export class TreeTraversal {
+class TreeTraversal {
   static preOrder(root, dataArr = []) {
     if (!root) return;
 
@@ -46,3 +46,5 @@ export class TreeTraversal {
     return dataArr;
   }
 }
+
+module.exports = TreeTraversal;

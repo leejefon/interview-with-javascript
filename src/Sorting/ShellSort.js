@@ -1,4 +1,4 @@
-export class ShellSort {
+class ShellSort {
   static sort(arr) {
     var gaps = [5, 1];
 
@@ -15,3 +15,5 @@ export class ShellSort {
     return arr;
   }
 }
+
+module.exports = ShellSort;

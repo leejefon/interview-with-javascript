@@ -1,12 +1,12 @@
-export class Contact {
+class Contact {
   constructor (emails) {
     this.emails = emails;
   }
 }
 
-export class ContactDeduplication {
+class ContactDeduplication {
   static exec(contacts) {
-    var emails = {};
+    let emails = {};
     contacts.forEach(contact => {
       contact.emails.forEach(email => {
         if (emails[email]) {
@@ -18,7 +18,7 @@ export class ContactDeduplication {
     });
 
     var mergedEmails = [];
-    for (var email in emails) {
+    for (const email in emails) {
       var added = false;
       for (var i in mergedEmails) {
         if (mergedEmails[i].indexOf(email) !== -1) {
@@ -32,7 +32,7 @@ export class ContactDeduplication {
     }
 
     var mergedContacts = [];
-    for (var i in mergedEmails) {
+    for (const i in mergedEmails) {
       mergedContacts.push(new Contact(mergedEmails[i]));
     }
 
@@ -47,3 +47,8 @@ export class ContactDeduplication {
     return a.filter((elem, index) => a.indexOf(elem) === index);
   }
 }
+
+module.exports = {
+  Contact,
+  ContactDeduplication
+};

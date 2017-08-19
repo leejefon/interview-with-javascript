@@ -1,4 +1,4 @@
-export class Search2DMatrix {
+class Search2DMatrix {
   static exec(matrix, target) {
     var i = matrix.length - 1;
     var j = 0;
@@ -13,3 +13,5 @@ export class Search2DMatrix {
     else return false;
   }
 }
+
+module.exports = Search2DMatrix;

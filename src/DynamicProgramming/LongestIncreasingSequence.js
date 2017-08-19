@@ -1,4 +1,4 @@
-export class LongestIncreasingSequence {
+class LongestIncreasingSequence {
   static exec(arr) {
     var result = Array(arr.length).fill(1);
 
@@ -15,3 +15,5 @@ export class LongestIncreasingSequence {
     return Math.max(...result);
   }
 }
+
+module.exports = LongestIncreasingSequence;

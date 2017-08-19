@@ -1,4 +1,4 @@
-export class Node {
+class Node {
   constructor(data) {
     this.data = data;
   }
@@ -35,7 +35,7 @@ export class Node {
   }
 }
 
-export class BinaryTree {
+class BinaryTree {
   constructor(root) {
     this.root = root;
   }
@@ -44,7 +44,7 @@ export class BinaryTree {
     this.insertHelper(this.root, node);
   }
 
-  private insertHelper(root, node) {
+  insertHelper(root, node) {
     if (node.data >= root.data) {
       if (root.right) {
         this.insertHelper(root.right, node);
@@ -89,3 +89,8 @@ export class BinaryTree {
     this.printHelper(root.right);
   }
 }
+
+module.exports = {
+  Node,
+  BinaryTree
+};

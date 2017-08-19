@@ -1,4 +1,4 @@
-export class MergeSort {
+class MergeSort {
   static sort(arr) {
     if (arr.length === 1) {
       return arr;
@@ -36,3 +36,5 @@ export class MergeSort {
     return merged;
   }
 }
+
+module.exports = MergeSort;

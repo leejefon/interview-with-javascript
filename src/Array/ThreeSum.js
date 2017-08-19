@@ -1,4 +1,4 @@
-export class ThreeSum {
+class ThreeSum {
   static exec(arr, sum) {
     var results = [];
 
@@ -29,3 +29,5 @@ export class ThreeSum {
     return results;
   }
 }
+
+module.exports = ThreeSum;

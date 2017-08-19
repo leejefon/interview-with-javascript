@@ -1,4 +1,4 @@
-export class CoinChange {
+class CoinChange {
   static exec(coins, amount) {
     var results = Array(amount + 1).fill(amount + 1);
     results[0] = 0;
@@ -14,3 +14,5 @@ export class CoinChange {
     return results[amount] > amount ? -1 : results[amount];
   }
 }
+
+module.exports = CoinChange;

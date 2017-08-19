@@ -1,4 +1,4 @@
-export class PriorityQueue {
+class PriorityQueue {
   constructor(collection, comparator) {
     if (typeof collection === 'function') {
       this.comparator = collection;
@@ -49,7 +49,7 @@ export class PriorityQueue {
     return false;
   }
 
-  size(): number {
+  size() {
     return this.queue.length;
   }
 
@@ -67,7 +67,9 @@ export class PriorityQueue {
     this.queue = [];
   }
 
-  toArray()[] {
+  toArray() {
     return this.queue;
   }
 }
+
+module.exports = PriorityQueue;

@@ -1,6 +1,6 @@
-import { Node } from './LinkedList';
+const Node = require('./LinkedList').Node;
 
-export class SortList {
+class SortList {
   static sort(head) {
     if (!head || !head.next) {
       return head;
@@ -62,3 +62,5 @@ export class SortList {
     return newHead;
   }
 }
+
+module.exports = SortList;

@@ -1,4 +1,4 @@
-export class MoveZeroes {
+class MoveZeroes {
   static exec(arr) {
     let insertIndex = 0;
     for (const i in arr) {
@@ -14,3 +14,5 @@ export class MoveZeroes {
     return arr;
   }
 }
+
+module.exports = MoveZeroes;

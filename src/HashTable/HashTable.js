@@ -1,4 +1,4 @@
-export class HashEntry {
+class HashEntry {
   constructor(key, value) {
     this.key = key;
     this.value = value;
@@ -13,7 +13,7 @@ export class HashEntry {
   }
 }
 
-export class HashTable {
+class HashTable {
   constructor(table_size = 128) {
     this.TABLE_SIZE = table_size;
     this.table = new Array(this.TABLE_SIZE).fill(null);
@@ -57,3 +57,8 @@ export class HashTable {
     }
   }
 }
+
+module.exports = {
+  HashEntry,
+  HashTable
+};

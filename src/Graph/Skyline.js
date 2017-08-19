@@ -1,6 +1,6 @@
-import { PriorityQueue } from '../PriorityQueue/PriorityQueue';
+const PriorityQueue = require('../PriorityQueue/PriorityQueue');
 
-export class Skyline {
+class Skyline {
   static exec(buildings) {
     var vertices = [];
     var result = [];
@@ -15,10 +15,10 @@ export class Skyline {
       return a[1] - b[1];
     });
 
-    var pq = new PriorityQueue();
+    const pq = new PriorityQueue();
     pq.offer(0);
     var prevHeight = 0;
-    for (var v of vertices) {
+    for (const v of vertices) {
       if (v[1] < 0) pq.offer(-v[1]);
       else pq.remove(v[1]);
 
@@ -32,3 +32,5 @@ export class Skyline {
     return result;
   }
 }
+
+module.exports = Skyline;

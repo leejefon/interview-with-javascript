@@ -1,6 +1,6 @@
-import { Node } from './LinkedList';
+const Node = require('./LinkedList').Node;
 
-export class ReverseLinkedList {
+class ReverseLinkedList {
   static exec(head) {
     var newHead = null;
 
@@ -14,3 +14,5 @@ export class ReverseLinkedList {
     return newHead;
   }
 }
+
+module.exports = ReverseLinkedList;

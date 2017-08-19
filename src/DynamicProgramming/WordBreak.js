@@ -1,4 +1,4 @@
-export class WordBreak {
+class WordBreak {
   static exec(str, dict) {
     let dp = Array(str.length + 1).fill(false);
     dp[0] = true;
@@ -15,3 +15,5 @@ export class WordBreak {
     return dp[str.length];
   }
 }
+
+module.exports = WordBreak;

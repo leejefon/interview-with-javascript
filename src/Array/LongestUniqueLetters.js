@@ -1,4 +1,4 @@
-export class LongestUniqueLetters {
+class LongestUniqueLetters {
   static exec(str) {
     var strNoRepeat = [];
     var longest = 0;
@@ -22,3 +22,5 @@ export class LongestUniqueLetters {
     return longest;
   }
 }
+
+module.exports = LongestUniqueLetters;

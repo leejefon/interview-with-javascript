@@ -1,4 +1,4 @@
-export class ReversePolishNotation {
+class ReversePolishNotation {
   static exec(tokens) {
     var stack = [];
 
@@ -32,3 +32,5 @@ export class ReversePolishNotation {
     return stack[0];
   }
 }
+
+module.exports = ReversePolishNotation;

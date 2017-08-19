@@ -1,10 +1,9 @@
-import { LongestUniqueLetters } from './LongestUniqueLetters';
+import test from 'ava';
+import LongestUniqueLetters from './LongestUniqueLetters';
 
-describe("Longest Substring without Repeating Characters", () => {
-  it("should work", () => {
-    let str: string = "abcabcbb";
-    let result: string = "abc";
+test('Longest Substring without Repeating Characters', (t) => {
+  const str = 'abcabcbb';
+  const result = 'abc';
 
-    expect(LongestUniqueLetters.exec(str)).toEqual(result.length);
-  });
+  t.is(LongestUniqueLetters.exec(str), result.length, 'Should equal');
 });

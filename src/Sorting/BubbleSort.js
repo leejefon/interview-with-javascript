@@ -1,4 +1,4 @@
-export class BubbleSort {
+class BubbleSort {
   static sort(arr) {
     for (let i = 0; i < arr.length; i++) {
       for (let j = 0; j < i; j++) {
@@ -13,3 +13,5 @@ export class BubbleSort {
     return arr;
   }
 }
+
+module.exports = BubbleSort;

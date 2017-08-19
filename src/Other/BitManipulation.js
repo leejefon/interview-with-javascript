@@ -1,4 +1,4 @@
-export class BitManipulation {
+class BitManipulation {
   static swapWithoutTemp(arr, a, b) {
     arr[a] = arr[a] ^ arr[b];
     arr[b] = arr[a] ^ arr[b];
@@ -24,3 +24,5 @@ export class BitManipulation {
     return result;
   }
 }
+
+module.exports = BitManipulation;

@@ -1,4 +1,4 @@
-export class HeapSort {
+class HeapSort {
   static sort(arr) {
     this.heapify(arr);
     for (var i = this.N; i > 0; i--) {
@@ -41,3 +41,5 @@ export class HeapSort {
     arr[j] = temp;
   }
 }
+
+module.exports = HeapSort;

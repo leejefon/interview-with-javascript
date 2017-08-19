@@ -1,4 +1,4 @@
-export class InsertionSort {
+class InsertionSort {
   static sort(arr) {
     for (var i = 0; i < arr.length; i++) {
       for (var j = i; j > 0; j--) {
@@ -13,3 +13,5 @@ export class InsertionSort {
     return arr;
   }
 }
+
+module.exports = InsertionSort;

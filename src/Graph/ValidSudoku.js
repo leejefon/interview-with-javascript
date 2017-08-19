@@ -1,4 +1,4 @@
-export class ValidSudoku {
+class ValidSudoku {
   static exec(board) {
     var sudokuSize = board.length;
 
@@ -37,3 +37,5 @@ export class ValidSudoku {
     return true;
   }
 }
+
+module.exports = ValidSudoku;

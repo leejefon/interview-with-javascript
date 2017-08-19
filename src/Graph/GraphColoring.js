@@ -1,4 +1,4 @@
-export class GraphColoring {
+class GraphColoring {
   constructor(graph, numColors) {
     this.graph = graph;
     this.numColors = numColors;
@@ -26,3 +26,5 @@ export class GraphColoring {
     return true;
   }
 }
+
+module.exports = GraphColoring;
