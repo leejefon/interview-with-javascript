@@ -1,7 +1,5 @@
 import { BitManipulation } from './BitManipulation';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Bit Manipulations", () => {
   it("Swap without temp variable", () => {
     let a = [1, 2];

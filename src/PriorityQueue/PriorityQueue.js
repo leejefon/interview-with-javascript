@@ -1,8 +1,5 @@
 export class PriorityQueue {
-  queue: any[];
-  comparator: any;
-
-  public constructor(collection?: any, comparator?: any) {
+  constructor(collection, comparator) {
     if (typeof collection === 'function') {
       this.comparator = collection;
       collection = [];
@@ -18,13 +15,13 @@ export class PriorityQueue {
     }
   }
 
-  public add(item: any): boolean {
+  add(item) {
     if (this.offer(item)) return true;
     else throw new Error('Queue is full');
   }
 
-  public offer(item: any): boolean {
-    for (var i = 0; i < this.queue.length; i++) {
+  offer(item) {
+    for (let i = 0; i < this.queue.length; i++) {
       if (this.comparator(item, this.queue[i]) > 0) {
         var temp = this.queue[i];
         this.queue[i] = item;
@@ -36,41 +33,41 @@ export class PriorityQueue {
     return true
   }
 
-  public poll(): any {
+  poll() {
     var item = this.queue.shift();
     return item;
   }
 
-  public peek(): any {
+  peek() {
     return this.queue[0];
   }
 
-  public contains(item: any): boolean {
+  contains(item) {
     this.queue.forEach(queueItem => {
       if (item === queueItem) return true;
     });
     return false;
   }
 
-  public size(): number {
+  size(): number {
     return this.queue.length;
   }
 
-  public isEmpty(): boolean {
+  isEmpty() {
     return this.queue.length === 0 ? true : false;
   }
 
-  public remove(item: any): void {
+  remove(item) {
     this.queue = this.queue.filter(queueItem => {
       return queueItem !== item;
     });
   }
 
-  public clear(): void {
+  clear() {
     this.queue = [];
   }
 
-  public toArray(): any[] {
+  toArray()[] {
     return this.queue;
   }
 }

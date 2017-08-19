@@ -1,7 +1,5 @@
 import { CoinChange } from './CoinChange';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Coin Change", () => {
   it("should work", () => {
     let coins: number[] = [1, 2, 5];

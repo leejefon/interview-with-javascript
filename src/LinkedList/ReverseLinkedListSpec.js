@@ -1,8 +1,6 @@
 import { List, Node } from './LinkedList';
 import { ReverseLinkedList } from './ReverseLinkedList';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Reverse linked list", () => {
   it("should work", () => {
     let list: List = new List(10);

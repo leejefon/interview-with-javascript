@@ -1,11 +1,11 @@
 import { PriorityQueue } from '../PriorityQueue/PriorityQueue';
 
-export class Skyline {  
-  public static exec(buildings: number[][]) {
-    var vertices: number[][] = [];
-    var result: number[][] = [];
+export class Skyline {
+  static exec(buildings) {
+    var vertices = [];
+    var result = [];
 
-    for (var a of buildings) {
+    for (const a of buildings) {
       vertices.push([a[0], -a[2]]);
       vertices.push([a[1], a[2]]);
     }

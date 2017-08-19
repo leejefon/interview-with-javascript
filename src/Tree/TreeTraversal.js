@@ -1,7 +1,7 @@
 import { Node } from './BinaryTree';
 
 export class TreeTraversal {
-  public static preOrder(root: Node, dataArr = []) {
+  static preOrder(root, dataArr = []) {
     if (!root) return;
 
     dataArr.push(root.data);
@@ -11,7 +11,7 @@ export class TreeTraversal {
     return dataArr;
   }
 
-  public static inOrder(root: Node, dataArr = []) {
+  static inOrder(root, dataArr = []) {
     if (!root) return;
 
     this.inOrder(root.left, dataArr);
@@ -21,7 +21,7 @@ export class TreeTraversal {
     return dataArr;
   }
 
-  public static postOrder(root: Node, dataArr = []) {
+  static postOrder(root, dataArr = []) {
     if (!root) return;
 
     this.postOrder(root.left, dataArr);
@@ -31,7 +31,7 @@ export class TreeTraversal {
     return dataArr;
   }
 
-  public static levelOrder(root:Node, dataArr = [], level = 0) {
+  static levelOrder(root, dataArr = [], level = 0) {
     if (!root) return;
 
     if (dataArr[level]) {

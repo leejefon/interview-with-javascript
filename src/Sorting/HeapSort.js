@@ -1,7 +1,5 @@
 export class HeapSort {
-  private static N: number;
-
-  public static sort(arr: number[]): number[] {
+  static sort(arr) {
     this.heapify(arr);
     for (var i = this.N; i > 0; i--) {
       this.swap(arr, 0, i);
@@ -12,18 +10,18 @@ export class HeapSort {
     return arr;
   }
 
-  private static heapify(arr: number[]): void {
+  static heapify(arr) {
     this.N = arr.length - 1;
     for (var i = Math.floor(this.N / 2); i >= 0; i--) {
       this.maxHeap(arr, i);
     }
   }
 
-  private static maxHeap(arr: number[], i: number): void {
-    var leftIndex: number = 2 * i;
-    var rightIndex: number = leftIndex + 1;
+  static maxHeap(arr, i) {
+    var leftIndex = 2 * i;
+    var rightIndex = leftIndex + 1;
 
-    var maxIndex: number = i;
+    var maxIndex = i;
     if (leftIndex <= this.N && arr[leftIndex] > arr[i]) {
       maxIndex = leftIndex;
     }
@@ -37,8 +35,8 @@ export class HeapSort {
     }
   }
 
-  private static swap(arr, i, j): void {
-    var temp: number = arr[i];
+  static swap(arr, i, j) {
+    var temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
   }

@@ -1,7 +1,5 @@
 import { MoveZeroes } from './MoveZeroes';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Move 0s to the end", () => {
   it("should work", () => {
     let arr: number[] = [9, 5, 0, 7, 0, 3, 1, 2, 0, 4];

@@ -1,6 +1,6 @@
-export class CoinChange {  
-  public static exec(coins: number[], amount: number): number {
-    var results: number[] = Array(amount + 1).fill(amount + 1);
+export class CoinChange {
+  static exec(coins, amount) {
+    var results = Array(amount + 1).fill(amount + 1);
     results[0] = 0;
 
     for (var i = 1; i <= amount; i++) {

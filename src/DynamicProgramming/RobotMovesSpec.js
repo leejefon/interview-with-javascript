@@ -1,7 +1,5 @@
 import { RobotMoves } from './RobotMoves';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Unique robot move paths", () => {
   it("should work", () => {
     var board: number[][] = [

@@ -1,7 +1,5 @@
 import { PriorityQueue } from './PriorityQueue';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Priority Queue", () => {
   it("default priority", () => {
     let pq = new PriorityQueue();

@@ -1,7 +1,5 @@
 import { LongestIncreasingSequence } from './LongestIncreasingSequence';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Longest Increasing Sequence", () => {
   it("should work", () => {
     let arr: number[] = [1, -2, 2, -2, 3, 5, -2];

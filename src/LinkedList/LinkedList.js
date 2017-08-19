@@ -1,17 +1,14 @@
 export class Node {
-  data: any;
-  next: Node;
-
-  public constructor(data?) {
+  constructor(data) {
     this.data = data;
   }
 
-  public printNode(): void {
+  printNode() {
     console.log(this.data);
   }
 
-  public toArray(head?: Node): any[] {
-    var result: any[] = [];
+  toArray(head) {
+    var result = [];
 
     if (!head) {
       head = this;
@@ -28,23 +25,21 @@ export class Node {
 }
 
 export class List {
-  head: Node;
-
-  public constructor(initData) {
+  constructor(initData) {
     this.head = new Node(initData);
   }
 
-  public append(node: Node): void {
+  append(node) {
     this.appendHelper(this.head, node);
   }
 
-  private appendHelper(head: Node, node: Node): void {
+  appendHelper(head, node) {
     if (head.next) this.appendHelper(head.next, node);
     else head.next = node;
   }
 
-  public printList(): void {
-    var temp: Node = this.head;
+  printList() {
+    var temp = this.head;
 
     while (temp) {
       temp.printNode();

@@ -1,11 +1,7 @@
 import { HashTable } from '../HashTable/HashTable';
 
 export class TrieNode {
-  char: string;
-  children: HashTable;
-  isEndOfWord: boolean;
-
-  public constructor(char?: string) {
+  constructor(char) {
     if (char) this.char = char;
     this.children = new HashTable(26);
     this.isEndOfWord = false;
@@ -13,24 +9,22 @@ export class TrieNode {
 }
 
 export class Trie {
-  root: TrieNode;
-
-  public constructor() {
+  constructor() {
     this.root = new TrieNode();
   }
 
-  public insert(str: string): void {
+  insert(str) {
     this.insertHelper(this.root, str);
   }
 
-  private insertHelper(root: TrieNode, str: string): void {
+  insertHelper(root, str) {
     if (str.length === 0) {
       root.isEndOfWord = true;
       return;
     }
 
-    var char: string = str.charAt(0);
-    var children: HashTable = root.children;
+    var char = str.charAt(0);
+    var children = root.children;
     var node = children.get(char.charCodeAt(0));
 
     if (!node) {
@@ -40,7 +34,7 @@ export class Trie {
     return this.insertHelper(node, str.substring(1));
   }
 
-  public search(str: string): boolean {
+  search(str): boolean {
     var currRoot = this.root;
 
     for (var i = 0; i < str.length; i++) {

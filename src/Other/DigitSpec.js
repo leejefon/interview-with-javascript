@@ -1,7 +1,5 @@
 import { Digit } from './Digit';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Digit", () => {
   it("Count digit 1s", () => {
     expect(Digit.count(99)).toEqual(20);

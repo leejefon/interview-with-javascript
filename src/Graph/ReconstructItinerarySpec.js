@@ -1,7 +1,5 @@
 import { ReconstructItinerary } from './ReconstructItinerary';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Reconstruct Itinerary", () => {
   it("should work", () => {
     let tickets: string[][] = [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]];

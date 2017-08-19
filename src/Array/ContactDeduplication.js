@@ -1,13 +1,11 @@
 export class Contact {
-  emails: string[];
-
-  constructor (emails: string[]) {
+  constructor (emails) {
     this.emails = emails;
   }
 }
 
 export class ContactDeduplication {
-  public static exec(contacts: Contact[]): Contact[] {
+  static exec(contacts) {
     var emails = {};
     contacts.forEach(contact => {
       contact.emails.forEach(email => {
@@ -41,11 +39,11 @@ export class ContactDeduplication {
     return mergedContacts;
   }
 
-  private static union(a: string[], b: string[]): string[] {
+  static union(a, b) {
     return this.unique(a.concat(b));
   }
 
-  private static unique(a) {
+  static unique(a) {
     return a.filter((elem, index) => a.indexOf(elem) === index);
   }
 }

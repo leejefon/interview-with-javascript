@@ -6,8 +6,6 @@ import { MergeSort } from './MergeSort';
 import { QuickSort } from './QuickSort';
 import { HeapSort } from './HeapSort';
 
-declare var describe: any, it: any, expect: any, beforeEach: any;
-
 describe("Sorting Test", () => {
   let arr: number[] = [];
   let result: number[] = [];

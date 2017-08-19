@@ -1,22 +1,22 @@
 export class QuickSort {
-  public static sort(arr: number[]): number[] {
+  static sort(arr) {
     this.quicksort(arr, 0, arr.length - 1);
     return arr;
   }
 
-  private static quicksort(arr: number[], lowIndex: number, highIndex: number): void {
+  private static quicksort(arr, lowIndex, highIndex) {
     if (lowIndex >= highIndex) return;
 
-    var pivot: number = arr[Math.floor((highIndex + lowIndex) / 2)]
+    var pivot = arr[Math.floor((highIndex + lowIndex) / 2)]
 
-    var i: number = lowIndex;
-    var j: number = highIndex;
+    var i = lowIndex;
+    var j = highIndex;
     while (i <= j) {
       while (arr[i] < pivot) i++;
       while (arr[j] > pivot) j--;
 
       if (i <= j) {
-        var temp: number = arr[i];
+        var temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
         i++; j--;

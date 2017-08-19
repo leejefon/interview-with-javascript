@@ -1,5 +1,5 @@
 export class Digit {
-  public static count(n: number, digit: number = 1): number {
+  static count(n, digit = 1) {
     var digits = 0;
     for (let m = 1; m <= n; m *= 10) {
       let a = Math.floor(n / m), b = n % m;
@@ -8,7 +8,7 @@ export class Digit {
     return digits;
   }
 
-  public static root(n: number) {
+  static root(n) {
     return 1 + (n - 1) % 9;
   }
 }

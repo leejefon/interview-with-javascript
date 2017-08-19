@@ -1,26 +1,26 @@
 export class MergeSort {
-  public static sort(arr: number[]): number[] {
+  static sort(arr) {
     if (arr.length === 1) {
       return arr;
     }
 
-    var partitions: { left: number[], right: number[]} = this.partition(arr);
+    var partitions = this.partition(arr);
 
-    var left: number[] = this.sort(partitions.left);
-    var right: number[] = this.sort(partitions.right);
+    var left = this.sort(partitions.left);
+    var right = this.sort(partitions.right);
 
     return this.merge(left, right);
   }
 
-  private static partition(arr: number[]): { left: number[], right: number[]} {
+  static partition(arr) {
     return {
       left: arr.splice(0, Math.floor(arr.length / 2)),
       right: arr
     };
   }
 
-  private static merge(left: number[], right: number[]): number[] {
-    var merged: number[] = [];
+  static merge(left, right) {
+    var merged = [];
 
     if (left.length === 0) return right;
     if (right.length === 0) return left;

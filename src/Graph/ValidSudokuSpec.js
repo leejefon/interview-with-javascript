@@ -1,7 +1,5 @@
 import { ValidSudoku } from './ValidSudoku';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Valid Sudoku", () => {
   it("should work", () => {
     let board: number[][] = [

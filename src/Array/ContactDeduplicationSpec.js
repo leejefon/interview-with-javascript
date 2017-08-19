@@ -1,7 +1,5 @@
 import { Contact, ContactDeduplication } from './ContactDeduplication';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Contact deduplication", () => {
   it("should work", () => {
     var contacts: Contact[] = [];

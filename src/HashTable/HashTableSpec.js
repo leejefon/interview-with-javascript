@@ -1,7 +1,5 @@
 import { HashTable } from './HashTable';
 
-declare let describe: any, it: any, expect: any;
-
 describe("Hash Table Test", () => {
   it("should insert and retrieve", () => {
     let hashTable: HashTable = new HashTable(3);

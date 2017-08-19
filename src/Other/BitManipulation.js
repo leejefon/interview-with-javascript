@@ -1,23 +1,23 @@
 export class BitManipulation {
-  public static swapWithoutTemp(arr: number[], a: number, b: number): void {
+  static swapWithoutTemp(arr, a, b) {
     arr[a] = arr[a] ^ arr[b];
     arr[b] = arr[a] ^ arr[b];
     arr[a] = arr[a] ^ arr[b];
   }
 
-  public static addWithoutPlus(a: number, b: number): number {
+  static addWithoutPlus(a, b) {
     if (b === 0) return a;
     else return this.addWithoutPlus(a ^ b, (a & b) << 1);
   }
 
-  public static compareWithoutIf(a: number, b: number): number {
-    var c = a - b;
-    var k = (c >> 31) & 0x1;
+  static compareWithoutIf(a, b) {
+    const c = a - b;
+    const k = (c >> 31) & 0x1;
     return a - k * c;
   }
 
-  public static singleNumber(arr: number[]): number {
-    var result = 0;
+  static singleNumber(arr) {
+    let result = 0;
     for (var a of arr) {
       result ^= a;
     }

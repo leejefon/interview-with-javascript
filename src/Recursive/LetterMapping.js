@@ -1,5 +1,5 @@
 export class LetterMapping {
-  private static letterMapping = [
+  static letterMapping = [
     'A', 'B', 'C', 'D', 'E',
     'F', 'G', 'H', 'I', 'J',
     'K', 'L', 'M', 'N', 'O',
@@ -8,10 +8,10 @@ export class LetterMapping {
     'Z'
   ];
 
-  public static exec(num: number): string[] {
+  static exec(num) {
     if (!num) return [];
 
-    var result: string[] = [];
+    var result = [];
 
     if (num <= 26) {
       result.push(this.letterMapping[num - 1]);

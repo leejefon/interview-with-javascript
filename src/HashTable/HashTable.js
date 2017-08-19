@@ -1,34 +1,27 @@
 export class HashEntry {
-  key: number;
-  value: any;
-
-  public constructor(key: number, value: any) {
+  constructor(key, value) {
     this.key = key;
     this.value = value;
   }
 
-  public getKey(): number {
+  getKey() {
     return this.key;
   }
 
-  public getValue(): any {
+  getValue() {
     return this.value;
   }
 }
 
 export class HashTable {
-  private TABLE_SIZE: number;;
-
-  table: HashEntry[];
-
-  public constructor(table_size: number = 128) {
+  constructor(table_size = 128) {
     this.TABLE_SIZE = table_size;
     this.table = new Array(this.TABLE_SIZE).fill(null);
   }
 
-  public get(key: number): any {
-    var hash: number = key % this.TABLE_SIZE;
-    var originalHash: number = hash;
+  get(key) {
+    var hash = key % this.TABLE_SIZE;
+    var originalHash = hash;
 
     while (this.table[hash] && this.table[hash].getKey() !== key) {
       hash = (hash + 1) % this.TABLE_SIZE;
@@ -45,9 +38,9 @@ export class HashTable {
     }
   }
 
-  public put(key: number, value: any): void {
-    var hash: number = key % this.TABLE_SIZE;
-    var originalHash: number = hash;
+  put(key, value) {
+    var hash = key % this.TABLE_SIZE;
+    var originalHash = hash;
 
     while (this.table[hash] && this.table[hash].getKey() !== key) {
       hash = (hash + 1) % this.TABLE_SIZE;

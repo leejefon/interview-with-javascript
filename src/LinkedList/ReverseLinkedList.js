@@ -1,11 +1,11 @@
 import { Node } from './LinkedList';
 
 export class ReverseLinkedList {
-  public static exec(head: Node): Node {
+  static exec(head) {
     var newHead = null;
 
     while (head) {
-      var next: Node = head.next;
+      const next = head.next;
       head.next = newHead;
       newHead = head;
       head = next;

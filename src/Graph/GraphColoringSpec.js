@@ -1,7 +1,5 @@
 import { GraphColoring } from './GraphColoring';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Graph Coloring", () => {
   it("should work", () => {
     let graph: number[][] = [

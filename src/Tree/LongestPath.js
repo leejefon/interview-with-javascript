@@ -1,7 +1,7 @@
 import { Node } from './BinaryTree';
 
 export class LongestPath {
-  public static exec(root: Node): { length: number, height: number } {
+  static exec(root) {
     if (!root) {
       return {
         length: 0,
@@ -9,8 +9,8 @@ export class LongestPath {
       };
     }
 
-    var leftTree: { length: number, height: number } = this.exec(root.left);
-    var rightTree: { length: number, height: number } = this.exec(root.right);
+    const leftTree = this.exec(root.left);
+    const rightTree = this.exec(root.right);
 
     return {
       length: Math.max(leftTree.height + rightTree.height + 1, leftTree.length, rightTree.length),

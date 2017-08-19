@@ -1,7 +1,5 @@
 import { WordBreak } from './WordBreak';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Word Break", () => {
   it("should work", () => {
     let dict: string[] = ['be', 'bed', 'and', 'bath'];

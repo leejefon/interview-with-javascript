@@ -1,7 +1,5 @@
 import { List, Node } from './LinkedList';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Linked List Test", () => {
   it("should work", () => {
     let list: List = new List(10);

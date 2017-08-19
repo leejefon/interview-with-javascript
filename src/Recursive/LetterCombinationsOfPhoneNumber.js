@@ -1,5 +1,5 @@
 export class LetterCombinationsOfPhoneNumber {
-  private static phoneNumberMapping = {
+  static phoneNumberMapping = {
     0: [''],
     1: [''],
     2: ['A', 'B', 'C'],
@@ -12,15 +12,15 @@ export class LetterCombinationsOfPhoneNumber {
     9: ['W', 'X', 'Y', 'Z']
   };
 
-  public static exec(phone: string): string[] {
+  static exec(phone) {
     if (phone.length === 1) return this.phoneNumberMapping[phone];
 
-    var result: string[] = [];
+    var result = [];
 
-    var rest: string[] = this.exec(phone.slice(1));
+    var rest = this.exec(phone.slice(1));
 
     for (var a of this.phoneNumberMapping[phone.charAt(0)]) {
-      for (var i in rest) {
+      for (const i in rest) {
         result.push(a + rest[i]);
       }
     }

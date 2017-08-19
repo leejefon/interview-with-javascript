@@ -1,15 +1,11 @@
-export class GraphColoring {  
-  graph: number[][];
-  colors: number[];
-  numColors: number;
-
-  public constructor(graph: number[][], numColors: number) {
+export class GraphColoring {
+  constructor(graph, numColors) {
     this.graph = graph;
     this.numColors = numColors;
     this.colors = Array(graph.length).fill(-1);
   }
 
-  public solve(v: number = 0): number[] {
+  solve(v = 0){
     if (v === this.graph.length) return this.colors;
 
     for (var color = 1; color <= this.numColors; color++) {
@@ -20,8 +16,8 @@ export class GraphColoring {
     }
   }
 
-  public checkNeighbours(v: number, color: number): boolean {
-    for (var i = 0; i < this.graph[v].length; i++) {
+  checkNeighbours(v, color) {
+    for (let i = 0; i < this.graph[v].length; i++) {
       if (this.graph[v][i] === 1 && this.colors[i] === color) {
         return false;
       }

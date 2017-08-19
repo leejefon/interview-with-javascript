@@ -1,8 +1,6 @@
 import { BinaryTree, Node } from './BinaryTree';
 import { TreeTraversal } from './TreeTraversal';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Binary Tree Traversal", () => {
   it("preorder traversal", () => {
     let tree: BinaryTree = new BinaryTree(new Node(50));

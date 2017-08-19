@@ -1,10 +1,10 @@
-export class RobotMoves {  
-  public static exec(board: number[][]): number {
+export class RobotMoves {
+  static exec(board) {
     var width = board[0].length;
-    var dp: number[] = Array(width).fill(0);
+    var dp = Array(width).fill(0);
 
     dp[0] = 1;
-    for (var row of board) {
+    for (const row of board) {
       for (var j = 0; j < width; j++) {
         if (row[j] == 1) {
           dp[j] = 0;

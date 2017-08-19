@@ -1,7 +1,5 @@
 import { RedBlackTree, RedBlackNode, Color } from './RedBlackTree';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Red Black Tree Test", () => {
   it("recolring test: (self, parent, uncle) all red", () => {
     let tree: RedBlackTree = new RedBlackTree(new RedBlackNode(50));

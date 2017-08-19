@@ -1,7 +1,5 @@
 import { Search2DMatrix } from './Search2DMatrix';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Search 2D Matrix", () => {
   it("should work", () => {
     let matrix: number[][] = [

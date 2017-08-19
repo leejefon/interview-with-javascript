@@ -1,17 +1,13 @@
 export class Node {
-  data: any;
-  left: Node;
-  right: Node
-
-  public constructor(data?) {
+  constructor(data) {
     this.data = data;
   }
 
-  public getParent(root: Node): Node {
+  getParent(root) {
     if (!root) return null;
 
-    var left: Node = null;
-    var right: Node = null;
+    var left = null;
+    var right = null;
 
     if (JSON.stringify(root.left) === JSON.stringify(this) || JSON.stringify(root.right) === JSON.stringify(this)) {
       return root;
@@ -23,34 +19,32 @@ export class Node {
     return left ? left : right;
   }
 
-  public getUncle(root: Node): Node {
+  getUncle(root) {
     if (!root) return null;
 
-    var parent: Node = this.getParent(root);
-    var grandParent: Node = parent ? parent.getParent(root) : null;
+    var parent = this.getParent(root);
+    var grandParent = parent ? parent.getParent(root) : null;
 
     if (!grandParent) return null;
     else if (this.data > grandParent.data) return grandParent.left;
     else return grandParent.right;
   }
 
-  public print(): void {
+  print() {
     console.log(this.data);
   }
 }
 
 export class BinaryTree {
-  root: Node;
-
-  public constructor(root: Node) {
+  constructor(root) {
     this.root = root;
   }
 
-  public insert(node: Node): void {
+  insert(node) {
     this.insertHelper(this.root, node);
   }
 
-  private insertHelper(root: Node, node: Node): void {
+  private insertHelper(root, node) {
     if (node.data >= root.data) {
       if (root.right) {
         this.insertHelper(root.right, node);
@@ -66,11 +60,11 @@ export class BinaryTree {
     }
   }
 
-  public search(data): any {
+  search(data) {
     return this.searchHelper(this.root, data);
   }
 
-  private searchHelper(root: Node, data: any) {
+  searchHelper(root, data) {
     if (!root) {
       return null;
     }
@@ -84,11 +78,11 @@ export class BinaryTree {
     }
   }
 
-  public print(): void {
+  print() {
     this.printHelper(this.root);
   }
 
-  private printHelper(root: Node) {
+  printHelper(root) {
     if (!root) return;
     this.printHelper(root.left);
     root.print();

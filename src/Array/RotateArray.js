@@ -1,5 +1,5 @@
-export class RotateArray {  
-  public static exec (arr: number[], k: number): number[] {
+export class RotateArray {
+  static exec (arr, k) {
     if (k > arr.length) return null;
 
     var firstHalf = [];

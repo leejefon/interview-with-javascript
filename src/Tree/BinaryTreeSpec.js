@@ -1,7 +1,5 @@
 import { BinaryTree, Node } from './BinaryTree';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Binary Tree Test", () => {
   it("insert left and right", () => {
     let tree: BinaryTree = new BinaryTree(new Node(50));

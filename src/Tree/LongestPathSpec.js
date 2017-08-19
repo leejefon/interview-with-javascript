@@ -1,8 +1,6 @@
 import { BinaryTree, Node } from './BinaryTree';
 import { LongestPath } from './LongestPath';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Longest Path", () => {
   it("should work", () => {
     let tree: BinaryTree = new BinaryTree(new Node(10));

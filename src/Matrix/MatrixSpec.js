@@ -1,7 +1,5 @@
 import { Matrix } from './Matrix';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Matrix Operations", () => {
   it("transpose", () => {
     let matrix: Matrix = new Matrix([

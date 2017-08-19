@@ -6,33 +6,27 @@ export enum Color {
 }
 
 export class RedBlackNode extends Node {
-  color: Color;
-
-  public constructor(initData) {
+  constructor(initData) {
     super(initData);
     this.color = Color.BLACK;
   }
 
-  public print(): void {
+  print() {
     console.log(this.data + ' ' + this.color);
   }
 }
 
 export class RedBlackTree extends BinaryTree {
-  public constructor(root: RedBlackNode) {
-    super(root);
-  }
-
-  public insert(node: RedBlackNode): void {
+  insert(node) {
     node.color = Color.RED;
     super.insert(node);
     this.adjustTree(node);
   }
 
-  private adjustTree(node: RedBlackNode): void {
-    var parent: RedBlackNode = <RedBlackNode> node.getParent(this.root);
-    var uncle: RedBlackNode = <RedBlackNode> node.getUncle(this.root);
-    var grandParent: RedBlackNode = parent ? <RedBlackNode> parent.getParent(this.root) : null;
+  adjustTree(node) {
+    var parent = node.getParent(this.root);
+    var uncle = node.getUncle(this.root);
+    var grandParent = parent ? parent.getParent(this.root) : null;
 
     if (node &&
       JSON.stringify(node) !== JSON.stringify(this.root) &&
@@ -52,7 +46,7 @@ export class RedBlackTree extends BinaryTree {
           grandParent.color = Color.RED;
         }
 
-        this.rotateRight(grandParent, <RedBlackNode> grandParent.getParent(this.root));
+        this.rotateRight(grandParent, grandParent.getParent(this.root));
       } else if (grandParent && parent.data > grandParent.data) { // Right of grandparent
         if (node.data < parent.data) { // left of parent
           this.rotateRight(parent, grandParent);
@@ -63,15 +57,15 @@ export class RedBlackTree extends BinaryTree {
           grandParent.color = Color.RED;
         }
 
-        this.rotateLeft(grandParent, <RedBlackNode> grandParent.getParent(this.root));
+        this.rotateLeft(grandParent, grandParent.getParent(this.root));
       }
     }
 
-    (<RedBlackNode> this.root).color = Color.BLACK;
+    this.root.color = Color.BLACK;
   }
 
-  private rotateRight(node: RedBlackNode, parent: RedBlackNode): void {
-    var x: RedBlackNode = <RedBlackNode> node.left;
+  otateRight(node, parent) {
+    let x = node.left;
     node.left = x.right;
     x.right = node;
 
@@ -81,8 +75,8 @@ export class RedBlackTree extends BinaryTree {
     }
   }
 
-  private rotateLeft(node: RedBlackNode, parent: RedBlackNode): void {
-    var x: RedBlackNode = <RedBlackNode> node.right;
+  otateLeft(node, parent) {
+    let x = node.right;
     node.right = x.left;
     x.left = node;
 

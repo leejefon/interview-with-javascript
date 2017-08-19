@@ -1,8 +1,6 @@
 import { List, Node } from './LinkedList';
 import { SortList } from './SortList';
 
-declare var describe: any, it: any, expect: any;
-
 describe("Sort List", () => {
   it("should work", () => {
     let list: List = new List(20);
